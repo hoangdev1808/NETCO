@@ -32,7 +32,6 @@ export const server = () => {
 
 	watch([
 		"src/js/**.js",
-		"src/js/fullpage.js"
 	], series(jsTask));
 
 	watch([

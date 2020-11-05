@@ -28,5 +28,5 @@ const copyFavicon = () => {
 module.exports = {
 	copyImage,
 	copyFonts,
-	copyFavicon
+	copyFavicon,
 };

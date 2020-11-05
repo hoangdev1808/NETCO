@@ -10,7 +10,6 @@ import sourcemap from "gulp-sourcemaps";
 
 export const jsTask = () => {
 	return src(["src/js/*.js",
-				"src/js/fullpage.js"
 	])
 		.pipe(plumber())
 		.pipe(babel({
