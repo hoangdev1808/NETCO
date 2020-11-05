@@ -1,0 +1,41 @@
+.contact
+	@media screen and (max-width: 1366px)
+		.container
+			max-width: 1230px!important
+	.contact-item
+		padding: (30/16)*1rem (25/16)*1rem (60/16)*1rem (25/16)*1rem
+		background-color: #f6f0e6
+		border-radius: 15px
+		margin: 40/16 *1rem 0 30/16 *1rem
+		@media screen and (max-width: 1024px)
+			height: 278px
+		@media screen and ( max-width:991px )
+			margin-top: 20px
+			height: inherit
+			margin-bottom: 0
+		@media screen and (max-width: 480px)
+			padding: 20px 10px
+		.section-title
+			font-size: 18/16 *1rem
+			text-transform: uppercase
+		.contact-info
+			display: flex
+			list-style-type: none
+			padding-bottom: 5px
+			&:last-child
+				padding-bottom: 0
+			&:nth-child(2)
+				margin: 20px 0 15px
+			*
+				font-size: 14px
+			.material-icons
+				color: $colorMain
+				line-height: 1.35
+				padding-right: 10px
+			.content
+				color: $colorSub
+				font-weight: 500
+				&.blue
+					color: #0042b4
+					text-decoration: underline
+
