@@ -1,0 +1,45 @@
+.kv-header
+	display:none!important
+.list-codong
+	@media screen and (max-width: 1366px)
+		.container
+			max-width: 1230px!important
+	.list-item
+		display: block
+		border-radius: 10px
+		background-color: #fbf7ef
+		img
+			border-top-left-radius: 10px
+			border-top-right-radius: 10px
+			width: 100%
+			height: 240px
+			object-fit: cover
+		&:hover
+			background-color: $colorMain
+			transition: .2s ease-in-out
+			.list-content *
+				color: white
+			.list-seemore span:first-child
+				text-decoration: underline
+		.list-content
+			padding: (20/16)*1rem (30/16)*1rem
+			.section-title
+				margin-bottom: 20px
+		.list-seemore
+			display: flex
+			align-items: center
+			*
+				color: $colorSub
+				font-size: 14px
+				font-weight: 400
+			.lnr-arrow-right
+				padding-left: 20px
+	.distance:nth-child(n+4)
+		margin-top: 30px
+	@media screen and (max-width: 992px)
+		.distance:nth-child(n+3)
+			margin-top: 20px
+	@media screen and (max-width: 576px)
+		.distance:nth-child(n+2)
+			margin-top: 20px
+
