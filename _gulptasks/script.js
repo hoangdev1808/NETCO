@@ -9,7 +9,9 @@ import rename from "gulp-rename";
 import sourcemap from "gulp-sourcemaps";
 
 export const jsTask = () => {
-	return src(["src/js/**.js"])
+	return src(["src/js/*.js",
+				"src/js/fullpage.js"
+	])
 		.pipe(plumber())
 		.pipe(babel({
 			presets: ["@babel/preset-env"]

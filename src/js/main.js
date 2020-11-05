@@ -1,3 +1,4 @@
+import FullPage from './fullpage'
 function initMapping() {
     $('header .navbar .logo a ').mapping({
         mobileWrapper: 'header  .navbar .main-menu .logo-mobile',
@@ -348,6 +349,7 @@ function category() {
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
+    FullPage();
     initMapping();
     toggleMenuMobile();
     DataBG();
