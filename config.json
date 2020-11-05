@@ -5,6 +5,7 @@
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"bower_components/bootstrap/dist/js/bootstrap.min.js",
+		"bower_components/underscore/underscore.js",
 		"vendors/mapping.js",
         "vendors/mapping-listener.js",
 		"bower_components/swiper/dist/js/swiper.min.js",
