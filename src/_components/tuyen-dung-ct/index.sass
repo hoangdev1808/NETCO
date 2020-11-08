@@ -3,7 +3,6 @@
 		color: $colorMain
 		font-size: 30/16*1rem
 		font-weight: 700
-		line-height: 24/16*1rem
 		margin-bottom: 25/16*1rem
 	.title-2
 		font-size: 18/16*1rem
@@ -47,6 +46,8 @@
 			width: 100%
 			padding: 10px 0
 			height: 40px
+			@media screen and ( max-width: 1520px )
+				height: auto
 			td:first-child
 				width: 310px
 				padding-left: 39px
@@ -54,6 +55,12 @@
 				color: #333333
 				font-weight: 600
 				line-height: 40/16*1rem
+				@media screen and ( max-width: 768px )
+					width: 50%
+				@media screen and ( max-width: 480px )
+					padding-left: 15px
+					line-height: inherit
+					
 			td:last-child
 				font-size: 16px
 				font-weight: 400
@@ -84,3 +91,66 @@
 				font-style: italic
 				color: #0042b4
 				padding-left: 20px
+	.section-btn
+		display: flex
+		margin-top: 40/16*1rem
+		@media screen and ( max-width: 576px )
+			flex-direction: column
+			align-items: center
+			margin-top: 25px
+		.btn-item
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 16px
+			padding: 16px 26px 15px
+			color: white
+			text-transform: uppercase
+			border-radius: 25px
+			font-family: $fontSub
+			&.btn-red
+				background-color: $colorMain
+				margin-right: 20px
+				@media screen and ( max-width: 576px )
+					margin-right: 0
+			&.btn-blue
+				background-color: #0042b4
+				i
+					padding-right: 8px
+				@media screen and ( max-width: 576px )
+					margin-top: 10px
+			&:hover
+				transform: translateY(-3px)
+				transition: all .3s ease-in-out
+	.recuirement-other
+		@media screen and (max-width: 991px)
+			margin-top: 30px
+		.recuirement-header
+			padding: 16px 23px
+			background-color: $colorMain
+			border-radius: 5px 5px 0 0
+			.title
+				font-size: 16px
+				line-height: 28/16*1rem
+				color: #ffffff
+				text-transform: uppercase
+				margin-bottom: 0
+				font-weight: 600
+				letter-spacing: .5px
+		.recuirement-body
+			height: 80px
+			border-radius: 5px
+			background-color: #fbf7ef
+			padding: 22px 20px
+			margin-top: 10px
+			@media screen and ( max-width: 1520px )
+				height: auto
+			.content
+				display: block
+				font-size: 16px
+				color: $colorMain
+				font-weight: 700
+			.content-sub
+				display: block
+				font-size: 12px
+				color: #999999
