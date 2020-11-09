@@ -5,16 +5,17 @@
 			justify-content: center
 	.investor-item
 		position: relative
+		border-radius: 50%
+		.img
+			height: 290px
+			img
+				height: 100%
+				width: 290px
+				border-radius: 50%
 		@media screen and ( max-width: 991px)
 			text-align: center
-			display: inline-block
-		.img
-			max-width: 288px
-			height: 289px
-			img
-				width: 100%
-				height: 100%
 		.content
+			opacity: 0
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
@@ -25,8 +26,27 @@
 			font-weight: 700
 			text-transform: uppercase
 			padding: 0 45/16*1rem
+			z-index: 2
+			transition: all .2s ease-in-out
 			@media screen and ( max-width: 1200px )
 				font-size: 20px
+		.overplay
+			position: absolute
+			top: 0
+			height: 100%
+			width: 100%
+			background-color: rgba(0,0,0,0.4)
+			opacity: 0
+			border-radius: 50%
+			transition: all .2s ease-in-out
+		&:hover
+			cursor: pointer
+			.content
+				opacity: 1
+				transition: all .2s ease-in-out
+			.overplay
+				opacity: 1
+				transition: all .2s ease-in-out
 	[class*='col-']:nth-child(n+3) .investor-item
 		@media screen and ( max-width: 991px )
 			margin-top: 20px
@@ -37,6 +57,8 @@
 	background-color: #fbf7ef
 	margin-top: 70/16*1rem
 	.reports
+		@media screen and ( max-width: 991px )
+			text-align: center
 		.title
 			font-size: 36/16*1rem
 			font-weight: 700
@@ -45,6 +67,8 @@
 		.report-item
 			display: flex
 			margin-bottom: 10px
+			@media screen and ( max-width: 991px )
+				justify-content: center
 			&:last-child
 				margin-bottom: 0
 			.material-icons
@@ -58,6 +82,8 @@
 				font-size: 16px
 				display: block
 				font-weight: 400
+				@media screen and ( max-width: 768px )
+					text-align: left
 		.btn-seemore
 			display: inline-flex
 			align-items: center
@@ -70,3 +96,17 @@
 			font-size: 16px
 			font-weight: 500
 			text-transform: uppercase
+			max-height: 50px
+			.text
+				padding-right: 10px
+			&:hover
+				border-color: white
+				color: white
+				background-color: $colorMain
+				transition: .2s ease-in-out
+	.img
+		min-height: 450px
+		background-color: white
+		@media screen and ( max-width: 991px )
+			margin-top: 20px
+			
