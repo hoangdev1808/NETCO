@@ -1,0 +1,53 @@
+section.kv-section.ct-codong
+	.container
+		.kv-title
+			h1 Báo cáo tài chính
+		.option
+			.span.sub Sắp xếp theo năm
+			.section-select
+				select(name="asdasd")
+					option(value="0") Tất cả
+					option(value="1") Tất cả
+					option(value="2") Tất cả
+		table
+			tr
+				td stt
+				td tài liệu
+				td ngày đăng
+				td xem
+				td tải về
+			-for(i=0;i<15;i++)
+				tr.section-hover
+					td
+						a.link-detail(href="#") 01
+					td
+						a.link-detail(href="#") Báo cáo tài chính Công ty Mẹ Bán niên soát xét 2019 (USD)
+					td
+						a.link-detail(href="#") 29/09/2020
+					td
+						a.see-detail(href="#") Xem chi tiết
+					td
+						a.download(href="#") 
+							span.text Tải về
+							span.material-icons vertical_align_bottom
+		.list-mobile.row
+			-for(i=0;i<6;i++)
+				.col-md-6
+					.list-item
+						h3.title.lcl.lcl-2
+							a(href="#") Báo cáo tài chính Công ty Mẹ Bán niên soát xét 2019 (USD)
+						p Ngày đăng: 29/09/2020
+						a.btn-mob(href="#") Xem chi tiết
+						a.btn-mob(href="#") 
+							span.text Tải về
+							span.material-icons vertical_align_bottom
+		ul.pagination
+			li.active
+				a(href="#") 1
+			li
+				a(href="#") 2
+			li
+				a(href="#") 3
+
+
+

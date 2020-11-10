@@ -1,0 +1,179 @@
+.ct-codong
+	.option
+		display: flex
+		align-items: center
+		.sub 
+			color: #333333
+			font-weight: 400
+			font-size: 16px
+		.section-select
+			width: 156px
+			position: relative
+			margin-left: 20px
+			height: 40px
+			select
+				background-color: #fbf7ef
+				padding: 0 10px 0 8px
+				border-radius: 5px
+				border: unset
+				-moz-appearance: none
+				-webkit-appearance:none
+				appearance: none
+				width: 100%
+				font-size: 14px
+				color: #333333
+				cursor: pointer
+				height: 100%
+			select::-ms-expand
+				display: none
+			&::before
+				font-family: Linearicons-Free
+				content: "\e874"
+				position: absolute
+				right: 10px
+				top: 50%
+				transform: translateY(-50%)
+				font-size: 14px
+				font-weight: 400
+				letter-spacing: 0.7px
+	table
+		@media screen and ( max-width: 1024px )
+			display: none
+		border-spacing: 0
+		width: 100%
+		margin-top: 20px
+		tr
+			max-height: 50px
+		tr>td
+			padding: 12px 0
+		tr>td:first-child
+			padding-left: 40px
+		tr>td:last-child
+			padding-right: 45px
+		td,tr
+			text-align: center
+		tr:first-child
+			background-color: $colorMain
+			td
+				font-size: 18px
+				font-weight: 700
+				text-transform: uppercase
+				color: #ffffff
+			td:first-child
+				border-top-left-radius: 5px
+			td:last-child
+				border-top-right-radius: 5px
+		tr:last-child
+			td
+				border-bottom: 1px solid #e1e1e1
+			td:first-child
+				display: block
+				border-bottom-left-radius: 5px
+			td:last-child
+				display: block
+				border-bottom-right-radius: 5px
+		tr:not(:first-child)
+			td:first-child
+				border-left: 1px solid #e1e1e1
+			td:last-child
+				border-right: 1px solid #e1e1e1
+		.section-hover:nth-child(odd)
+			background-color: #f3f3f3
+		.section-hover:hover .link-detail
+				color: $colorMain!important
+		.link-detail
+			display: block
+			font-size: 16px
+			color: #333333
+			font-weight: 400
+		.see-detail
+			font-size: 14px
+			color: #0042b4
+			text-decoration: underline
+			font-weight: 400
+			&:hover
+				color: $colorMain
+		.download
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-left: 10px
+			.text
+				margin-right: 10px
+				font-size: 14px
+				color: #666666
+			.material-icons
+				font-size: 20px
+				color: $colorMain
+			&:hover
+				.text
+					color: $colorMain
+	.pagination
+		display: flex
+		justify-content: center
+		margin-top: 40px
+		li
+			display: flex
+			max-width: 40px
+			max-height: 40px
+			align-items: center
+			border-radius: 20px
+			background-color: #fbf7ef
+			font-size: 16px
+			border: 3px solid  #fbf7ef
+			padding: 16px
+			margin-right: 10px
+			justify-content: center
+			font-weight: 700
+			color: #666666
+			&:last-child
+				margin-right: 0
+			&.active
+				border-radius: 20px
+				border: 3px solid #c10016
+				background-color: #ffffff
+				a
+					color: #c10016
+			&:hover
+				border: 3px solid #c10016
+				a
+					color: #c10016
+	.list-mobile
+		margin-top: 30px
+		@media screen and ( min-width: 1025px )
+			display: none
+		[class*='col-']:nth-child(n+3) .list-item
+			margin-top: 20px
+		[class*='col-']:nth-child(n+2) .list-item
+			@media screen and ( max-width: 767px )
+				margin-top: 20px
+		.list-item
+			border: 1px solid #e1e1e1
+			padding: 25px 15px
+			.title
+				overflow: hidden
+				line-height: 1
+				*
+					font-size: 18px
+					color: $colorMain
+					font-weight: 600
+			p
+				margin-top: 15px
+				margin-left: 15px
+			.btn-mob
+				margin-top: 15px
+				display: flex
+				align-items: center
+				justify-content: center
+				border: 1px solid $colorMain
+				background-color: $colorMain
+				color: white
+				height: 35px
+				&:hover
+					background-color: white
+					color: $colorMain
+					transition: .2s all ease-in-out
+				.text
+					padding-right: 15px 
+				.material-icons
+					font-size: 20px
