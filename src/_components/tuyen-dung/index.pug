@@ -1,0 +1,134 @@
+section.kv-section.tuyendung
+	.container
+		.kv-title
+			h1 Vị trí tuyển dụng
+		table
+			tr
+				td stt
+				td Vị trí tuyển dụng
+				td số lượng
+				td địa điểm
+				td hạn nộp hồ sơ
+			-for(i=0;i<10;i++)
+				tr
+					td
+						a.link-detail(href="#") 01
+					td
+						a.link-detail(href="#") Giám đốc khối nội chính
+					td
+						a.link-detail(href="#") 02
+					td
+						a.link-detail(href="#") Tp. Hồ Chí Minh
+					td
+						a.link-detail(href="#") 20/09/2020
+		.list-mobile.row
+			-for(i=0;i<5;i++)
+				.col-md-6
+					.list-item
+						h3.title.lcl.lcl-2
+							a(href="#") Giám đốc khối nội chính
+						p Số lượng: 02
+						p Địa điểm: Tp. Hồ Chí Minh
+						p Hạn nộp hồ sơ: 20/09/2020
+						a.btn-mob(href="#") Xem chi tiết
+section.kv-section.tuyendung-1
+	.container
+		.kv-title
+			h2 Quy trình tuyển dụng
+		.row
+			.col-lg-3.col-md-6.col-sm-12
+				.step-item
+					.step-ellipse
+						.number 
+							.item 1
+						.img
+							img(src="./assets/tuyen-dung/1.png", alt="")
+						h5.title Ứng tuyển
+					.step-parent
+						p.content Ứng viên ứng tuyển tại: Website - Fanpage Email - Hotline
+			.col-lg-3.col-md-6.col-sm-12
+				.step-item
+					.step-ellipse
+						.number 
+							.item 2
+						.img
+							img(src="./assets/tuyen-dung/2.png", alt="")
+						h5.title Phỏng vấn vòng 1
+					.step-parent
+						p.content Phỏng vấn với quản lý trực tiếp trong công việc
+			.col-lg-3.col-md-6.col-sm-12
+				.step-item
+					.step-ellipse
+						.number 
+							.item 3
+						.img
+							img(src="./assets/tuyen-dung/3.png", alt="")
+						h5.title Phỏng vấn vòng 2
+					.step-parent
+						p.content Phỏng vấn với Ban Lãnh đạo của Công ty (tùy vị trí)
+			.col-lg-3.col-md-6.col-sm-12
+				.step-item
+					.step-ellipse
+						.number 
+							.item 4
+						.img
+							img(src="./assets/tuyen-dung/4.png", alt="")
+						h5.title Thông báo kết quả
+					.step-parent
+						p.content Đạt: gửi Thư mời nhận việc Không đạt: gửi Thư cảm ơn!
+section.kv-section.tuyendung-2
+	.container
+		.kv-title
+			h3 Môi trường làm việc
+		.row.position-relative
+			.col-lg-8.col-md-12
+				.img
+					img(src="./assets/tuyen-dung/5.jpg", alt="")
+			.col-lg-4.col-md-12
+				.over-col Môi trường chuyên nghiệp, công việc đầy thách thức và cơ hội làm việc với những người giàu kinh nghiệm, là nơi tốt nhất để bạn chọn lựa cho con đường phát triển sự nghiệp của mình. Chúng tôi luôn cam kết tạo mọi điều kiện thuận lợi nhất giúp bạn đạt được mục tiêu nghề nghiệp. NETCO là nơi bạn có thể thỏa sức sáng tạo, đưa những kiến thức và kinh nghiệm vào thực tế nhằm góp
+section.kv-section.tuyendung-3
+	.container
+		.row
+			.col-lg-4.col-md-6.col-sm-12
+				.item-bg
+					h5.title-sub Cùng netco #[br] khẳng định & phát triển #[br]sự nghiệp
+			.col-lg-4.col-md-6.col-sm-12
+				a.item(href="#")
+					.img
+						img(src="./assets/tuyen-dung/6.png", alt="")
+					span.content Chương trình đào tạo giúp nhân viên phát triển và đạt được mục tiêu nghề nghiệp
+					span.material-icons arrow_forward
+			.col-lg-4.col-md-6.col-sm-12
+				a.item(href="#")
+					.img
+						img(src="./assets/tuyen-dung/7.png", alt="")
+					span.content Nhiều cơ hội công việc mới cùng với sự phát triển không ngừng của Công ty
+					span.material-icons arrow_forward
+			.col-lg-4.col-md-6.col-sm-12
+				a.item(href="#")
+					.img
+						img(src="./assets/tuyen-dung/8.png", alt="")
+					span.content Nhiều cơ hội công việc mới cùng với sự phát triển không ngừng của Công ty
+					span.material-icons arrow_forward
+			.col-lg-4.col-md-6.col-sm-12
+				a.item.detail(href="#")
+					span.title Nền văn hóa tạo cảm hứng làm việc và sáng tạo
+					span.content-2 Giá trị và sự thành công của chúng tôi phụ thuộc rất nhiều vào tính sáng tạo và sự hứng thú trong công việc của bạn. Chính vì thế chúng tôi luôn nỗ lực tạo ra một môi trường làm việc chuyên nghiệp nhưng không kém phần thân thiện và cởi mở để mỗi cá nhân có thể tự do phát huy tính sáng tạo, giải phóng được tiềm năng của bản thân từ đó tạo ra sự khác biệt.
+section.kv-section.tuyendung-4
+	.container
+		.kv-title
+			h4 Đào tạo & phát triển
+		.on-row
+			.box
+				h5.title Chương trình đào tạo giúp nhân viên phát triển và đạt được mục tiêu nghề nghiệp
+				.box-content
+					p.content Chúng tôi quan niệm đào tạo và phát triển nguồn nhân lực là chiến lược đầu tư cho sự thành công trong tương lai của công ty. Vì thế, là nhân viên của NETCO bạn sẽ có cơ hội được đào tạo nhằm hòan thiện các kỹ năng, kiến thức đáp ứng được yêu cầu và thách thức trong công việc. Các khóa đào tạo về chuyên môn và kỹ năng cũng như các buổi tham gia huấn luyện thực tế được chúng tôi tổ chức thường xuyên trong và ngoài nước.
+					p.content Tại NETCO, chúng tôi vạch ra con đường phát triển nghề nghiệp cụ thể cho bạn và chúng tôi mang đến các chương trình đào tạo phù hợp nhất giúp bạn nâng cao hiệu quả làm việc. Một khi hiệu quả làm việc của bạn được nâng cao, bạn sẽ được giao phó những công việc thử thách hơn và cùng với sự hỗ trợ tích cực từ đồng nghiệp và cấp trên, mục tiêu nghề nghiệp của bạn chắn chắn sẽ thành hiện thực.
+				.fade-red
+			.img
+				img(src="./assets/tuyen-dung/9.jpg", alt="")
+
+
+
+
+
