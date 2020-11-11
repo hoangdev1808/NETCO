@@ -242,9 +242,38 @@
 				display: block
 				font-size: 14px
 				line-height: 24/16*1rem
-				@media screen and ( max-width: 767px )
+				@media screen and ( max-width: 991px )
 					height: 200px
 					overflow: scroll
+		&.no-pad
+			padding: 0
+			position: relative
+			video
+				width: 100%
+				height: 100%
+				border-radius: 50px
+			.play
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				opacity: 0
+				*
+					font-size: 46px
+					color: white
+			.text
+				position: absolute
+				bottom: 25px
+				color: white
+				text-align: center
+				font-size: 16px
+				font-weight: bold
+				width: 100%
+				opacity: 0
+			&:hover
+				transition: .2s all ease-in-out
+				.play, .text
+					opacity: 1
 .tuyendung-4
 	background-color: #fbf7ef
 	.on-row
