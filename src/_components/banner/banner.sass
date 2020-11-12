@@ -9,111 +9,52 @@
 			height: 100%
 			div
 				height: 100%
-	.slide-content
+	.swiper-inner 
 		width: 100%
-		height: 100%
-		.swiper-inner 
+		height: 100vh
+		position: relative
+		img 
 			width: 100%
 			height: 100%
-			position: relative
-			img 
-				width: 100%
-				height: 100%
-				object-fit: cover
-
-			.content 
-				position: absolute
-				width: 100%
-				top: 15%
-				left: 0
-				z-index: 10
-				padding-left: 15px
-				.desc 
-					max-width: 570px
-					font-size: 40px
-					color: #ffffff
-					font-weight: 800
-					padding-bottom: 30px
-					text-transform: uppercase
-				.btn-more
-					border-width: 1px
-					border-color: rgb(255, 255, 255)
-					border-style: solid
-					border-radius: 30px
-					width: 238px
-					height: 58px
-					color: #ffffff
-					display: flex
-					align-items: center
-					justify-content: center
-					text-transform: uppercase
-					font-size: 16px
-					&:hover
-						background-color: #ffffff
-						color: $red
-					.lnr
-						padding-left: 10px
-				@media screen and ( max-width: 1366px)
-					left: 8.8%
-				@media screen and ( max-width: 1199px)
-					.title
-						font-size: 2rem
-						padding-bottom: 0
-					.sub-title
-						font-size: 1.5rem
-						margin: 10px 0
-					.desc
-						margin-bottom: 15px
-				@media screen and ( max-width: 991px)
-					.title
-						font-size: 1.875rem
-					.sub-title
-						font-size: 1.3rem
-				@media screen and ( max-width: 575px)
-					.title
-						font-size: 1rem
-						color: #ffffff
-					.sub-title
-						font-size: .9rem
-						color: #ffffff
-					.desc
-						display: none
-			&.content-center
-				.content
-					top: 30%
-					.desc
-						max-width: 810px
-						margin: 0 auto
-						text-align: center
-		@media screen and ( max-width: 991px)
-			height: 35vh
-			.slide-content
-				.swiper-inner
-					.content
-						width: 380px
-		@media screen and ( max-width: 767px)
-			.slide-content
-				.swiper-inner
-					.content
-						left: 0
-		@media screen and ( max-width: 575px)
-			height: 30vh
-			.slide-content
-				.swiper-inner
-					position: relative
-					img 
-						object-position: right
-					.content
-						width: max-content
-						padding: 30px
-						left: 20%
-						background-color: rgba($color: #000000, $alpha: .5)
-						
-		.swiper-pagination-bullet
-			width: 12px
-			height: 12px
-			opacity: 1
-			background-color: #f1f1f1
-			border: solid 1px #ffffff
-			&-active
-				background-color: $main-color
+			object-fit: cover
+			object-position: center
+		.content 
+			position: absolute
+			width: 100%
+			top: 15%
+			left: 0
+			z-index: 10
+			.desc 
+				max-width: 570px
+				font-size: 40px
+				color: #ffffff
+				font-weight: 800
+				padding-bottom: 30px
+				text-transform: uppercase
+			@media screen and ( max-width: 1366px)
+				.desc
+					max-width: 450px
+					font-size: 30/16*1rem
+			@media screen and ( max-width: 1280.98px)
+				.desc
+					max-width: 430px
+			@media screen and ( max-width: 1199.98px)
+				top: 30%
+				.desc
+					padding-bottom: 15px
+		&.content-center
+			.content
+				top: 30%
+				.desc
+					max-width: 810px
+					margin: 0 auto
+					text-align: center
+		@media screen and ( max-width:  991.98px)
+			height: 50vh
+			.content
+				.desc
+					font-size: 18/16*1rem
+		@media screen and ( max-width:  575.98px)
+			.content
+				.desc
+					font-size: 1rem

@@ -16,49 +16,60 @@
 	cursor: pointer
 	position: relative
 	padding: 0
-	display: flex
-	align-items: center
-	justify-content: center
+	width: 30px
+	height: 30px
 	transition: .3s all linear
-	.hamburger-button
-		position: relative
-		width: 26px
-		transition: .3s all linear
-		span
-			position: absolute
-			left: 50%
-			transform: translate(-50%, -50%)
-			width: 26px
-			height: 2px
-			background-color: $main-color
-			content: ""
-			transition: .3s all linear
-			&:first-child
-				top: -5px
-
-			&:last-child
-				top: 5px
+	span
+		display: block
+		position: absolute
+		height: 3px
+		width: 100%
+		background: $main-color
+		border-radius: 9px
+		opacity: 1
+		left: 0
+		-webkit-transform: rotate(0deg)
+		-moz-transform: rotate(0deg)
+		-o-transform: rotate(0deg)
+		transform: rotate(0deg)
+		transition: .5s ease-in-out
+		&:nth-child(1)
+			top: 0
+		&:nth-child(2),
+		&:nth-child(3)
+			top: 10px
+		&:nth-child(4)
+			top: 20px
 	&.active
-		transition: .3s all linear
-		.hamburger-button
-			span
-				top: 50%
+		span
+			&:nth-child(1)
+				top: 18px
+				width: 0%
 				left: 50%
-				&:first-child
-					transform: translate(-50%, -50%) rotate(45deg)
-				&:nth-child(2)
-					visibility: hidden
-					opacyti: 0
-					transition: .2s all linear
-				&:last-child
-					transform: translate(-50%, -50%) rotate(-45deg)
-	@media screen and ( min-width: 992px)
-		display: none
+			&:nth-child(2)
+				-webkit-transform: rotate(45deg)
+				-moz-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+			&:nth-child(3)
+				-webkit-transform: rotate(-45deg)
+				-moz-transform: rotate(-45deg)
+				-o-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+			&:nth-child(4)
+				top: 18px
+				width: 0%
+				left: 50%
 	@media(max-width: 576px)
-		width: 40px
-		.hamburger-button
 		+ span
 			display: none
+.gradient
+	position: absolute
+	bottom: 0px
+	left: 0px
+	width: 100%
+	height: 200px
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255))
 #overlay
 	opacity: 0
 	visibility: hidden
@@ -95,8 +106,10 @@
 	@media (min-width: 1025px)
 		padding: 50px 0
 
-	@media (min-width: 1200px)
+	@media (min-width: 1199.98px)
 		padding: 60px 0
+		.section-image
+			display: none
 
 	@media (min-width: 1438px)
 		padding: 60px 0
@@ -118,12 +131,14 @@
 		text-transform: uppercase
 		text-align: center
 
-		@media(max-width: 1025px)
-			font-size: 1.5rem
+		@media(max-width: 1280.98px)
+			font-size: 30/16*1rem
 		@media(max-width: 991.98px)
-			font-size: 1.125rem
+			font-size: 25/16*1rem
 
-	@media screen and (max-width: 1025px)
+	@media screen and (max-width: 1366px)
+		margin-bottom: 20px
+	@media screen and (max-width: 1024px)
 		margin-bottom: 15px
 .pages
 	margin-left: auto

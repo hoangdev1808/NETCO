@@ -1,44 +1,44 @@
 header.kv-header
-	.container
-		nav.navbar.navbar-expand-lg
-			ul.navbar-nav.nav-left
-				li.nav-item.active
-					a.nav-link(href="index.html") Trang chủ
-				li.nav-item.active
-					a.nav-link(href="gioi-thieu.html") Giới thiệu
-				li.nav-item.dropdown
-					a.nav-link(href="nhan-hieu-kinh-doanh.html") Nhãn hiệu kinh doanh
-				li.nav-item
-					a.nav-link(href="co-dong.html") Quan hệ cổ đông
-			a.navbar-brand(href="index.html")
-				img(src="./assets/logo.png", alt="")
-			ul.navbar-nav.nav-right
-				li.nav-item.active
-					a.nav-link(href="tin-tuc.html") Truyền thông
-				li.nav-item.active
-					a.nav-link(href="nha-dau-tu.html") Nhà đầu tư
-				li.nav-item
-					a.nav-link(href="tuyen-dung.html") Cơ hội việc làm
-				li.nav-item
-					a.nav-link(href="lien-he.html") Liên hệ
-			.list-icons
-				.language
-					a(href="")
-						img(src="./assets/us.gif", alt="")
-					a(href="")
-						img(src="./assets/vn.gif", alt="")
-				.shopping
-					img(src="./assets/icons/add-shopping.png", alt="")
-				.search-icon
-					img(src="./assets/icons/search.png", alt="")
-				#search-box
-					.form-group
-						input(type="text" placeholder="Tìm sản phẩm...")
-						button.searchbutton.btn.btn__search
-							em.material-icons search
-			.main-nav
-				.kv-toggle
-					.hamburger-button
-						span
-						span
-						span
+	nav.navbar.navbar-expand-lg
+		ul.navbar-nav.nav-left
+			li.nav-item.active
+				a.nav-link(href="index.html") Trang chủ
+			li.nav-item.active
+				a.nav-link(href="gioi-thieu.html") Giới thiệu
+			li.nav-item.dropdown
+				a.nav-link(href="nhan-hieu-kinh-doanh.html") Nhãn hiệu kinh doanh
+			li.nav-item
+				a.nav-link(href="co-dong.html") Quan hệ cổ đông
+		a.navbar-brand(href="index.html")
+			img(src="./assets/logo.png", alt="")
+		ul.navbar-nav.nav-right
+			li.nav-item.active
+				a.nav-link(href="tin-tuc.html") Truyền thông
+			li.nav-item.active
+				a.nav-link(href="nha-dau-tu.html") Nhà đầu tư
+			li.nav-item
+				a.nav-link(href="tuyen-dung.html") Cơ hội việc làm
+			li.nav-item
+				a.nav-link(href="lien-he.html") Liên hệ
+		.list-icons
+			.language
+				a(href="")
+					img(src="./assets/us.gif", alt="")
+				a(href="")
+					img(src="./assets/vn.gif", alt="")
+			.shopping
+				img(src="./assets/icons/add-shopping.png", alt="")
+			.search-icon
+				img(src="./assets/icons/search.png", alt="")
+			#search-box
+				.form-group
+					input(type="text" placeholder="Tìm sản phẩm...")
+					button.searchbutton.btn.btn__search
+						em.material-icons search
+		.main-nav
+			ul.nav-mobile
+			.kv-toggle
+				span
+				span
+				span
+				span

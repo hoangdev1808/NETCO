@@ -1,29 +1,43 @@
 function initMapping() {
-    $('header .navbar .logo a ').mapping({
-        mobileWrapper: 'header  .navbar .main-menu .logo-mobile',
+    $('header .navbar .navbar-brand').mapping({
+        mobileWrapper: 'header  .navbar .main-nav',
         mobileMethod: 'appendTo',
-        desktopWrapper: 'header .navbar .main-menu .logo',
-        desktopMethod: 'insertAfter',
-        breakpoint: 991
+        desktopWrapper: 'header .navbar',
+        desktopMethod: 'appento',
+        breakpoint: 1199.98
+    });
+    $('header .navbar .list-icons').mapping({
+        mobileWrapper: 'header  .navbar .main-nav',
+        mobileMethod: 'appendTo',
+        desktopWrapper: 'header .navbar',
+        desktopMethod: 'appento',
+        breakpoint: 1199.98
+    });
+    $('header .navbar .navbar-nav .nav-item').mapping({
+        mobileWrapper: 'header  .navbar .main-nav .nav-mobile',
+        mobileMethod: 'appendTo',
+        desktopWrapper: 'header .navbar .navbar-nav',
+        desktopMethod: 'appento',
+        breakpoint: 1199.98
     })
 }
 const toggleMenuMobile = () => {
     $('.kv-toggle').on('click', function () {
         $(this).toggleClass('active');
-        $('.navbar-nav').toggleClass('active')
+        $('.nav-mobile').toggleClass('active')
         $('#overlay').toggleClass('active')
     });
     $('#overlay').on('click', function () {
         $(this).removeClass('active');
         $('.kv-toggle').removeClass('active')
-        $('.navbar-nav').removeClass('active')
+        $('.nav-mobile').removeClass('active')
 
     });
     $('.search-icon').on('click', function () {
         $('#search-box').slideToggle()
     })
     $('main').on('click', function () {
-        $('#search-box').removeClass('active')
+        $('#search-box').slideUp()
     })
 }
 
@@ -269,22 +283,24 @@ function DataBG() {
 }
 
 function setBackground() {
-    $("[setBackground]").each(function () {
-        var background = $(this).attr("setBackground");
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-size": "100% 100%",
-            "background-position": "center",
-            "background-repeat": "no-repeat",
+    if($(window).width() > 1199.98){
+        $("[setBackground]").each(function () {
+            var background = $(this).attr("setBackground");
+            $(this).css({
+                "background-image": "url(" + background + ")",
+                "background-size": "cover",
+                "background-position": "center",
+                "background-repeat": "no-repeat",
+            });
         });
-    });
-    $("[setBackgroundRepeat]").each(function () {
-        var background = $(this).attr("setBackgroundRepeat");
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-repeat": "no-repeat",
+        $("[setBackgroundRepeat]").each(function () {
+            var background = $(this).attr("setBackgroundRepeat");
+            $(this).css({
+                "background-image": "url(" + background + ")",
+                "background-repeat": "no-repeat",
+            });
         });
-    });
+    }
 }
 
 function tabs() {
@@ -314,30 +330,13 @@ function phantrang() {
     $('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
 }
 
-// function quantityNumber() {
-//     $(".qty-minus").click(function () {
-//         let minus = $(this).parents('.input-group').find('input').val();
-//         console.log('top')
-//         console.log(minus)
-//         if (minus > 0) {
-//             $(this).parents('.input-group').find('input').val(minus - 1);
-//         } else {
-//             $(this).parents('.input-group').find('input').val(0);
-//         }
-//     });
-//     $(".qty-plus").on("click", function () {
-//         let plus = Number($(this).parents('.input-group').find('input').val());
-//         console.log('bottom')
-//         console.log(plus)
-//         $(this).parents('.input-group').find('input').val(plus + 1);
-//     });
-// }
+
 function changePlaceholder() {
     $('.subscribe .form-group input ').attr('placeholder', 'Nhập email...');
 }
 
 function breadCrumb() {
-    $('.global-breadcrumb .breadcrumb li').first().find('a').addClass('fas fa-home')
+    $('.global-breadcrumb').appendTo('#page-banner .banner__pages')
 }
 
 function category() {
@@ -418,6 +417,7 @@ function nextItem() {
     $previousSlide.removeClass("up-scroll").addClass("down-scroll");
     $('#nav-pagination ul li').removeClass('active')
     $('#nav-pagination ul li:nth-child(' + (currentSlideNumber + 1) + ')').addClass('active');
+    $('header .navbar-brand').addClass('active')
     $('.counter').each(function () {
         var $this = $(this),
             countTo = $this.attr('data-count');
@@ -448,24 +448,9 @@ function previousItem() {
     $currentSlide.removeClass("down-scroll").addClass("up-scroll");
     $('#nav-pagination ul li').removeClass('active')
     $('#nav-pagination ul li:nth-child(' + (currentSlideNumber + 1) + ')').addClass('active');
-}
-
-function setBackgroundElement() {
-    $('[setBackground]').each(function () {
-        var background = $(this).attr('setBackground')
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-size": "cover",
-            "background-position": "center center"
-        })
-    })
-    $('[setBackgroundRepeat]').each(function () {
-        var background = $(this).attr('setBackgroundRepeat')
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-repeat": "repeat"
-        })
-    })
+    if ($currentSlide.is(':first-child')) {
+        $('header .navbar-brand').removeClass('active')
+    }
 }
 
 function EqualHeightElement(el) {
@@ -533,12 +518,9 @@ document.addEventListener('DOMContentLoaded', () => {
     checkLayoutBanner();
     tabs();
     phantrang();
-    // quantityNumber();
     changePlaceholder();
     breadCrumb();
     category();
-    //FullPage
-    setBackgroundElement()
     scrollToTop()
     createPagination()
     setTimeout(() => {
