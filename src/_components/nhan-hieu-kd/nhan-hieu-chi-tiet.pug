@@ -1,0 +1,97 @@
+section.kv-section.product-detail-page
+	.container
+		.row
+			.col-lg-6
+				.swiper-product-wrapper
+					.swiper-product-thumb
+						.swiper-container-thumbs.gallery-thumbs
+							.swiper-wrapper
+								-for(i=1; i<5; i++)
+									.swiper-slide
+										.img
+											img(src="./assets/NhanHang/pro-"+i+".png", alt="")
+					.swiper-product-main
+						.swiper-container.gallery-top
+							.swiper-wrapper
+								-for(i=1; i<5; i++)
+									.swiper-slide
+										.img
+											img(src="./assets/NhanHang/pro-"+i+".png", alt="")
+			.col-lg-6
+				.product-infor-wrapper
+					.product-title
+						a(href="") Nước rửa chén đậm đặc NET hương chanh 4kg
+					.price-wrapper
+						.price
+							span Giá:
+							.current 28.000 đ
+						.product-id
+							span SKU: 
+							.id 3136955484453
+					.desc-wrapper
+						ul
+							li
+								p Đậm đặc, dùng lượng ít vẫn sạch dầu mở nên tiết kiệm chi tiêu.
+							li
+								p Chứa chiết xuất chanh tươi tự nhiên khử mùi tanh, hôi vượt trội
+							li
+								p Công thức đặc biệt, giúp rửa sạch nhanh, không bám lại trên chén, dĩa nên rất an toàn thực phẩm
+							li
+								p pH trung tính, không hại da tay, không làm da tay khô hoặc rát.
+							li
+								p Vitamin E tự nhiên giúp da tay mềm mịn
+					.item-quantity
+						.input-group
+							label(for="") Số lượng:
+							.input-group-btn
+								.qty-minus.btn-number
+									em.material-icons remove
+							input.product-details-quantity.form-control.input-number(type='text', value='1')
+							.input-group-btn
+								.qty-plus.btn-number
+									em.material-icons add
+						.add-shopping-cart
+							a.nav-link(href="")
+								|mua ngay
+								span.lnr.lnr-arrow-right
+					.social-share
+						.fb-like(data-href='http://localhost:8000/' data-width='' data-layout='button_count' data-action='like' data-size='small' data-share='true')
+		.tab-panels
+			ul.tabs
+				li.item.active(rel='panel-1') Thông tin chi tiết
+				li.item(rel='panel-2') Bình luận
+			#panel-1.panel.active
+				.full-content
+					ul
+						li
+							p Nước Rửa Chén NET Đậm Đặc Hương Chanh (4kg) làm sạch nhanh và hiệu quả các vết bẩn, vết dầu mở trên chén dĩa.
+						li
+							p Chiết xuất Chanh: khử sạch mùi tanh, hôi trên chén dĩa.
+						li
+							p Công thức đặc biệt, giúp rửa sạch nhanh, không bám lại trên chén, dĩa nên rất an toàn thực phẩm.
+						li
+							p pH trung tính, không hại da tay, không làm da tay khô hoặc rát. Kết hợp với Vitamin E tự nhiên giúp da tay mềm mịn sau khi sử dụng.
+					p Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ...
+				//- a.view-more(href="") Xem thêm
+				//- 	em.material-icons expand_more
+			#panel-2.panel
+section.kv-section.product-other
+	.container
+		.caption
+			.title Sản phẩm khác
+		.swiper-product-other
+			.swiper-container
+				.swiper-wrapper
+					-for(i=1; i<4; i++)
+						.swiper-slide
+							.item-pro
+								.img
+									a(href="nhan-hieu-chi-tiet.html")
+										img(src="./assets/NhanHang/pro-"+i+".png", alt="")
+								.content
+									.product-title
+										a(href="nhan-hieu-chi-tiet.html") Nước rửa chén sạch hương chanh 4kg
+									.price-wrapper
+										.current 28.000 đ
+			.swiper-button-next
+			.swiper-button-prev

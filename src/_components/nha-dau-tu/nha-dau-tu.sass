@@ -1,0 +1,116 @@
+.investor
+	@media screen and ( max-width: 991px )
+		[class*='col-']
+			display: flex
+			justify-content: center
+	.investor-item
+		position: relative
+		border-radius: 50%
+		.img
+			height: 290px
+			img
+				height: 100%
+				width: 290px
+				border-radius: 50%
+				object-fit: cover
+				object-position: center
+		@media screen and ( max-width: 991px)
+			text-align: center
+		.content
+			opacity: .65
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			width: 100%
+			text-align: center
+			font-size: 24/16*1rem
+			color: white
+			font-weight: 700
+			text-transform: uppercase
+			padding: 0 45/16*1rem
+			z-index: 2
+			transition: all .2s ease-in-out
+			@media screen and ( max-width: 1200px )
+				font-size: 20px
+		.overplay
+			position: absolute
+			top: 0
+			height: 100%
+			width: 100%
+			background-color: rgba(0,0,0,0.4)
+			opacity: 0
+			border-radius: 50%
+			transition: all .2s ease-in-out
+		&:hover
+			cursor: pointer
+			.content
+				opacity: 1
+				transition: all .2s ease-in-out
+			.overplay
+				opacity: 1
+				transition: all .2s ease-in-out
+	[class*='col-']:nth-child(n+3) .investor-item
+		@media screen and ( max-width: 991px )
+			margin-top: 20px
+	[class*='col-']:nth-child(n+2) .investor-item
+		@media screen and ( max-width: 767px )
+			margin-top: 20px
+.investor-report
+	background-color: #fbf7ef
+	margin-top: 70/16*1rem
+	.reports
+		@media screen and ( max-width: 991px )
+			text-align: center
+		.title
+			font-size: 36/16*1rem
+			font-weight: 700
+			margin-bottom: 30px
+			color: $red
+		.report-item
+			display: flex
+			margin-bottom: 10px
+			@media screen and ( max-width: 991px )
+				justify-content: center
+			&:last-child
+				margin-bottom: 0
+			.material-icons
+				font-size: 18px
+				line-height: 1.5
+				font-weight: 400
+				color: $red
+				padding-right: 15px
+			.content
+				color: #333333
+				font-size: 16px
+				display: block
+				font-weight: 400
+				&:hover
+					color: $red
+				@media screen and ( max-width: 768px )
+					text-align: left
+		.btn-seemore
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			border: 1px solid $red
+			border-radius: 25px
+			padding: 17px 40px
+			color: $red
+			margin-top: 25px
+			font-size: 16px
+			font-weight: 500
+			text-transform: uppercase
+			max-height: 50px
+			.text
+				padding-right: 10px
+			&:hover
+				border-color: white
+				color: white
+				background-color: $red
+				transition: .2s ease-in-out
+	.img
+		min-height: 450px
+		background-color: white
+		@media screen and ( max-width: 991px )
+			margin-top: 20px
+			

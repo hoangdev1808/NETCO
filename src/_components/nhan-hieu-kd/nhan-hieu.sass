@@ -1,12 +1,544 @@
 .list-brand-page
 	background-color: #fbf7ef
+	.caption
+		.title 
+			margin-bottom: 17px
 	.brand-list
+		padding-top: 30px
+		padding-bottom: 40px
+		border-bottom: solid 1px $color-border
 		&:nth-child(odd)
 			.col-left
 				order: 2
 			.col-right
 				order: 1
 		&:last-child
+			border: none
+			padding-bottom: 0
 			.col-right
 				.row
 					justify-content: flex-end
+		.brand-item
+			position: relative
+			.img
+				overflow: hidden
+				position: relative
+				width: 285px
+				height: 285px
+				border-radius: 50%
+				img
+					width: 100%
+					height: 100%
+					border-radius: 50%
+					object-fit: cover
+					transform: scale(1)
+					transition: all .5s
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					border-radius: 50%
+					background-color: rgba($color: #000000, $alpha: .3)
+			.title
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				color: #ffffff
+				font-family: Montserrat
+				font-size: 24/16*1rem
+				font-weight: 700
+				font-style: normal
+				letter-spacing: normal
+				line-height: 32px
+				text-align: center
+				text-transform: uppercase
+			&:hover
+				.img
+					img
+						transition: all .5s
+						transform: scale(1.1)
+		.single-swiper
+			.swiper-button-next,
+			.swiper-button-prev
+				background-image: none
+				border-radius: 50%
+				width: 50px
+				height: 50px
+				border: 1px solid #c10016
+				background-color: #ffffff
+			.swiper-button-next
+				right: -60px
+				&::before
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					content: '\e876'
+					font-family: Linearicons-Free
+					color: #c10016
+					font-size: 24px
+					font-weight: 400
+					font-style: normal
+			.swiper-button-prev
+				left: -60px
+				&::before
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					content: '\e875'
+					font-family: Linearicons-Free
+					color: #c10016
+					font-size: 24px
+					font-weight: 400
+					font-style: normal
+.product-brand-page
+	background-color: #fbf7ef
+	.zone-title
+		width: 100%
+		height: 50px
+		border-radius: 5px 5px 0 0
+		background-color: #c10016
+		display: flex
+		align-items: center
+		justify-content: center
+		text-transform: uppercase
+		color: #ffffff
+		font-size: 1rem
+		font-weight: 700
+		font-style: normal
+		letter-spacing: normal
+	.accordion
+		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.05)
+		border-radius: 5px
+		background-color: #ffffff
+		list-style: none
+		padding-left: 0
+		.item
+			.accordion-title
+				padding-right: 20px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				.nav-link
+					padding: 1rem 20/16*1rem
+					color: #333333
+					font-size: 1rem
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					text-align: left
+				.lnr
+					cursor: pointer
+					transform: rotate(0deg)
+					transition: all .5s
+			&.active
+				.accordion-title
+					.nav-link,
+					.lnr
+						color: $red
+					.nav-link
+						font-weight: 600
+					.lnr
+						transform: rotate(180deg)
+						transition: all .5s
+			.inner
+				padding-top: 20px
+				padding-bottom: 20px
+				padding-left: 40px
+				list-style: none
+				background-color: #f7f7f7
+				display: none
+				li
+					margin-bottom: 24px
+					a
+						color: #333333
+						font-size: 1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+					&.active
+						a
+							color: $red
+					&:last-child
+						margin-bottom: 0
+				&.show
+	.product-sort-wrapper
+		padding-bottom: 10px
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: solid 1px rgba($color: $red, $alpha: .2)
+		.wrapper-left
+			.root-tile
+				color: $red
+				font-size: 30/16*1rem
+				font-weight: 700
+				font-style: normal
+				letter-spacing: normal
+		.wrapper-right
+			span
+				padding-right: 13px
+				color: #333333
+				font-size: 1rem
+				font-weight: 400
+				font-style: normal
+				letter-spacing: normal
+			select
+				width: 156px
+				height: 36px
+				border-radius: 5px
+				background-color: #ffffff
+				border: none
+				color: #333333
+				font-size: 14/16*1rem
+				font-weight: 400
+				font-style: normal
+				letter-spacing: normal
+				padding: 0 .5rem
+	.product-wrapper
+		padding-top: 30/16*1rem
+.product-detail-page
+	background-color: #fbf7ef
+	padding-top: 105px
+	border-radius: 10px
+	.swiper-product-wrapper
+		width: 100%
+		height: 570px
+		overflow: hidden
+		display: flex
+		background-color: #ffffff
+		.swiper-product-thumb
+			width: 20%
+			height: 570px
+			padding-top: 20px
+			.gallery-thumbs
+				height: 530px
+				overflow: hidden
+				display: flex
+				align-items: center
+				.swiper-slide
+					&-thumb-active
+						.img
+							border: solid 1px $red
+				.img
+					padding: 1rem 24/16*1rem
+					cursor: pointer
+					width: 84px
+					height: 84px
+					margin: 0 auto
+					img
+						width: 100%
+						height: 100%
+						object-fit: contain
+		.swiper-product-main
+			width: 80%
+			height: 100%
+			.gallery-top
+				height: 100%
+				.swiper-slide
+					.img
+						display: flex
+						align-items: center
+						justify-content: center
+						height: 100%
+						padding: 1rem
+	.product-infor-wrapper
+		.product-title
+			padding-bottom: 20px
+			margin-bottom: 20px
+			border-bottom: solid 1px rgba($color: #c10016, $alpha: .2)
+			a
+				color: $red
+				font-size: 24/16*1rem
+				font-weight: 700
+				font-style: normal
+				letter-spacing: normal
+				line-height: 28px
+				text-align: left
+		.price-wrapper
+			.price
+				display: flex
+				align-items: center
+				span
+					color: #333333
+					font-family: Montserrat
+					font-size: 1rem
+					font-weight: 500
+					font-style: normal
+					letter-spacing: normal
+					text-align: left
+					margin-right: 1rem
+					padding-top: 6px
+				.current
+					color: #c10016
+					font-size: 24/16*1rem
+					font-weight: 700
+					font-style: normal
+					letter-spacing: normal
+					text-align: center
+			.product-id
+				display: flex
+				align-items: center
+				padding-bottom: 25px
+				border-bottom: solid 1px #e1e1e1
+				margin-bottom: 24px
+				span
+					color: #333333
+					font-size: 1rem
+					font-weight: 500
+					font-style: normal
+					letter-spacing: normal
+					line-height: 24px
+					text-align: left
+					text-transform: uppercase
+					margin-right: 6px
+				.id
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					line-height: normal
+					font-size: 1rem
+					color: #333333
+		.desc-wrapper
+			padding-bottom: 33px
+			border-bottom: solid 1px #e1e1e1
+			margin-bottom: 30px
+			ul
+				padding-left: 20px
+				li
+					p
+						color: #333333
+						font-size: 1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 30px
+						text-align: left
+		.item-quantity
+			display: flex
+			margin-bottom: 24px
+			align-items: center
+			.input-group
+				display: flex
+				align-items: center
+				margin-right: 20px
+				width: auto
+				label
+					padding-right: 21px
+					color: #333333
+					font-size: 1rem
+					font-weight: 500
+					font-style: normal
+					letter-spacing: normal
+					line-height: 24px
+					text-align: left
+				.input-group-btn
+					width: 50px
+					height: 49px
+					border-radius: 25px 0 0 25px
+					background-color: #ebebeb
+					.btn-number
+						width: 100%
+						height: 100%
+						text-align: center
+						cursor: pointer
+						.material-icons
+							color: #333333
+							font-size: 36/16*1rem
+							font-weight: 400
+							letter-spacing: normal
+							line-height: 50px
+
+					&:nth-child(4)
+						width: 50px
+						height: 49px
+						border-radius: 0 25px 25px 0
+						background-color: #ebebeb
+				input
+					max-width: 110px
+					height: 50px
+					border: none
+					text-align: center
+					color: #333333
+					font-size: 1rem
+					font-weight: 700
+					font-style: normal
+					line-height: 24px
+					text-align: center
+					text-transform: uppercase
+					letter-spacing: 0.8px
+					&:focus
+						box-shadow: none
+
+			.add-shopping-cart
+				.nav-link
+					width: 210px
+					height: 50px
+					border-radius: 25px
+					background-color: #c10016
+					color: #ffffff
+					font-size: 1rem
+					font-weight: 400
+					font-style: normal
+					line-height: 35px
+					text-align: center
+					text-transform: uppercase
+					letter-spacing: 0.8px
+					transition: all .5s
+					&:hover
+						transform: translateY(-5px)
+						transition: all .5s
+					.lnr
+						padding-left: 14px
+		.fb_iframe_widget
+			width: max-content !important
+			span
+				width: auto !important
+				iframe
+					width: auto !important
+	.tab-panels
+		padding-top: 48px
+		.tabs
+			border-bottom: solid 1px $color-border
+			margin-bottom: 30px
+			.item
+				padding: 12/16*1rem 25/16*1rem
+				margin-right: 10px
+				border-radius: 5px 5px 0 0
+				background-color: #ffffff
+				text-align: center
+				color: #333333
+				font-size: 1rem
+				font-weight: 400
+				font-style: normal
+				letter-spacing: normal
+				line-height: 24px
+				text-transform: uppercase
+				&.active
+					background-color: #c10016
+					color: #ffffff
+		.panel
+			.full-content
+				padding-left: 31px
+				ul
+					padding-left: 20px
+					li
+						p
+							color: #333333
+							font-size: 1rem
+							font-weight: 400
+							font-style: normal
+							letter-spacing: normal
+							line-height: 30px
+							text-align: left
+				p
+					color: #333333
+					font-size: 1rem
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					line-height: 30px
+	@media screen and ( max-width: 1280px)
+		.product-infor-wrapper
+			.product-title
+				a
+					font-size: 18/16*1rem
+			.item-quantity
+				.add-shopping-cart
+					.nav-link
+						width: 170px
+	@media screen and ( max-width: 991px)
+		padding-top: 60px
+		.swiper-product-wrapper
+			margin-bottom: 30px
+	@media screen and ( max-width: 991px)
+		.product-infor-wrapper
+			.item-quantity
+				.input-group
+					margin-right: 20px
+	@media screen and ( max-width: 575px)
+		.swiper-product-wrapper
+			flex-direction: column-reverse
+			height: auto
+			.swiper-product-thumb
+				width: 100%
+				height: auto
+				.gallery-thumbs
+					width: 100%
+					height: auto
+			.swiper-product-main
+				width: 100%
+				.gallery-top
+		.tab-panels
+			.tabs
+				margin-bottom: 20px
+				.item
+					padding: .5rem
+	@media screen and ( max-width: 480px)
+		.product-infor-wrapper
+			.item-quantity
+				flex-direction: column
+				align-items: flex-start
+				.input-group
+					margin-bottom: 20px
+.product-other
+	.swiper-product-other
+		position: relative
+		.swiper-button-next,
+		.swiper-button-prev
+			background-image: none
+			border-radius: 50%
+			width: 50px
+			height: 50px
+			border: 1px solid #c10016
+		.swiper-button-next
+			right: -60px
+			&::before
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				content: '\e876'
+				font-family: Linearicons-Free
+				color: #c10016
+				font-size: 24px
+				font-weight: 400
+				font-style: normal
+		.swiper-button-prev
+			left: -60px
+			&::before
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				content: '\e875'
+				font-family: Linearicons-Free
+				color: #c10016
+				font-size: 24px
+				font-weight: 400
+				font-style: normal
+	@media screen and ( max-width: 575.98px)
+		.caption
+			.title
+				margin-bottom: 10px
+		.swiper-product-other
+			margin-bottom: 30px
+			.swiper-button-next,
+			.swiper-button-prev
+				top: 100%
+			.swiper-button-next
+				right: 35%
+			.swiper-button-prev
+				left: 35%
+	@media screen and ( max-width: 375.98px)
+		.swiper-product-other
+			.swiper-button-next
+				right: 30%
+			.swiper-button-prev
+				left: 30%

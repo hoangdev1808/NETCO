@@ -1,0 +1,64 @@
+section.kv-section.product-brand-page
+	.container
+		.row
+			.col-lg-3
+				.zone-title nhãn hiệu kinh doanh
+				ul.accordion
+					li.item
+						.accordion-title
+							a.nav-link(href="") Sản phẩm  nội địa
+							span.lnr.lnr-chevron-down
+						ul.inner
+							li
+								a(href="") Bột giặt
+							li
+								a(href="") Nước giặt
+							li
+								a(href="") Nước xả vải
+							li
+								a(href="") Nước lau sàn
+							li
+								a(href="") Nước rửa chén
+							li
+								a(href="") Nước tẩy
+					li.item
+						.accordion-title
+							a.nav-link(href="") Sản phẩm cung ứng
+							span.lnr.lnr-chevron-down
+						ul.inner
+							li 
+								a(href="") Bột giặt
+							li
+								a(href="") Nước giặt
+							li
+								a(href="") Nước xả vải
+							li
+								a(href="") Nước lau sàn
+							li
+								a(href="") Nước rửa chén
+							li
+								a(href="") Nước tẩy
+
+			.col-lg-9
+				.product-sort-wrapper
+					.wrapper-left
+						.root-tile Nước rửa chén
+					.wrapper-right
+						span Sắp xếp
+						select
+							option(value="Bán chạy") Bán chạy
+							option(value="Bán chạy") Bán chạy
+							option(value="Bán chạy") Bán chạy
+				.product-wrapper
+					.row
+						-for(i=1; i<9; i++)
+							.col-lg-4
+								.item-pro
+									.img
+										a(href="nhan-hieu-chi-tiet.html")
+											img(src="./assets/NhanHang/pro-"+i+".png", alt="")
+									.content
+										.product-title
+											a(href="nhan-hieu-chi-tiet.html") Nước rửa chén đậm đặc NET hương chanh 4kg
+										.price-wrapper
+											.current 28.000 đ

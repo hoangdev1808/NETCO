@@ -482,49 +482,14 @@ html body input.RadInput_Empty
 	position: relative
 	width: 100%
 	height: 100%
-.single-swiper,
-.slide-colum,
-.kv-slide,
-.other-slide
-	position: relative
-	.swiper-button-prev,
-	.swiper-button-next,
-		top: 50%
-		background-image: none
-		&:hover
-			&::before
-				color: $main-color
-	.swiper-button-prev
-		left: -40px
-		@media screen and ( max-width: 1024px)
-			left: 0
-
-		@media screen and ( max-width: 375px)
-			left: -15px
-		&::before
-			content: 'arrow_back'
-			font-family: Material Icons
-			font-size: 24px
-			color: $color-text
-	.swiper-button-next
-		right: -40px
-		@media screen and ( max-width: 1024px)
-			right: 0
-		@media screen and ( max-width: 375px)
-			right: -18px
-		&::before
-			content: 'arrow_forward'
-			font-family: Material Icons
-			font-size: 24px
-			color: $color-text
 .tab-panels
-	ul
+	.tabs
 		padding: 0
 		list-style: none
 		display: flex
 		align-items: center
 
-		li
+		.item
 			cursor: pointer
 			font-size: 16px
 			color: $color-text
@@ -536,29 +501,12 @@ html body input.RadInput_Empty
 				color: $red
 				transition: all .3s ease-in-out
 
-			&::after
-				position: absolute
-				content: ''
-				width: 100%
-				height: 2px
-				background-color: $main-color
-				left: 0
-				bottom: -1.5px
-
 	.panel
 		display: none
 		@media screen and ( max-width: 991px)
 			margin-top: .9rem
 		&.active
 			display: block
-	@media screen and ( max-width: 991px)
-		ul
-			display: none
-			background-color: #ffffff
-			padding: 0 .9rem
-			margin-bottom: .9rem
-			li
-				margin-right: 0
 .category-nav
 	display: flex
 	width: 100%
@@ -746,126 +694,6 @@ html body input.RadInput_Empty
 	font-size: 16px
 	em
 		padding-left: 10px
-.kv-slide
-	.item
-		background-color: rgb(255, 255, 255)
-		width: 100%
-		height: 120px
-		.img
-			width: 100%
-			height: 100%
-			padding: 0 30px
-			img
-				width: 100%
-				height: 100%
-				object-fit: contain
-			@media screen and ( max-width: 1024px)
-				padding: 15px
-.single-swiper
-	.swiper-slide
-		.item
-			cursor: pointer
-			.img
-				width: 150px
-				height: 150px
-				margin: 0 auto
-				border-radius: 50%
-				text-align: center
-				line-height: 150px
-				background-color: #ffffff
-				border-width: 1px
-				border-color: rgb(225, 225, 225)
-				border-style: solid
-
-				img
-					filter: brightness(1) invert(0)
-					transition: all .2s ease-in-out
-			.desc
-				margin-top: 20px
-				p
-					font-size: 16px
-					color: $color-text
-					line-height: 1.5
-					text-align: center
-
-			&:hover
-				.img
-					background-color: $main-color
-					img
-						filter: brightness(0) invert(1)
-						transition: all .2s ease-in-out
-				.desc
-					p
-						text-decoration: underline
-						color: $main-color
-	.swiper-button-prev,
-	.swiper-button-next
-		top: 40%
-.item-pro
-	width: 100%
-	height: 390px
-	.img
-		/* Style for "Layer 55" */
-		width: 100%
-		height: 235px
-		padding: 30px
-		overflow: hidden
-		img
-			width: 100%
-			height: 100%
-			transform: scale(1)
-			transition: all .3s
-			object-fit: contain
-	.content
-		width: 100%
-		padding: 30px 20px
-		padding-top: 0
-		padding-right: 0
-		@media screen and ( max-width: 375px)
-			padding-right: 20px
-		.title
-			font-size: 16px
-			color: $color-text
-			letter-spacing: -.3px
-		.desc
-			margin-top: 25px
-			display: flex
-			justify-content: space-between
-			.price
-				p
-					font-size: 18px
-					color: $red
-					font-weight: bold
-					line-height: 1.333
-				span
-					font-size: 14px
-					color: rgb(153, 153, 153)
-					text-decoration: line-through
-			.icon
-				width: 55px
-				height: 30px
-				display: flex
-				justify-content: center
-				align-items: center
-				a
-					.material-icons
-						line-height: 30px
-						color: $main-color
-						font-size: 20px
-				&:hover
-					background-color: $main-color
-					a
-						.material-icons
-							color: #ffffff
-	&:hover
-		.img
-			img
-				transform: scale(1.1)
-				transition: all .3s
-		.content
-			.title
-				color: $main-color
-				text-decoration: underline
 .other-title
 	font-size: 18px
 	color: $main-color
@@ -1004,3 +832,42 @@ html body input.RadInput_Empty
 		width: 100%
 	@media screen and ( min-width: 992px)
 		display: none
+.item-pro
+	width: 100%
+	margin-bottom: 30px
+	.img
+		padding-top: 1.25rem
+		width: 100%
+		height: 230px
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	.content
+		padding-top: 30/16*1rem
+		.product-title
+			max-width: 220px
+			margin: 0 auto
+			margin-bottom: 14/16*1rem
+			text-align: center
+			a
+				color: #333333
+				font-size: 1rem
+				font-weight: 500
+				font-style: normal
+				letter-spacing: normal
+				line-height: 24px
+		.price-wrapper
+			.current
+				color: $red
+				font-size: 22/16*1rem
+				font-weight: 700
+				font-style: normal
+				letter-spacing: normal
+				line-height: 24px
+				text-align: center
+	&:hover
+		.content
+			.product-title
+				a
+					color: $red
