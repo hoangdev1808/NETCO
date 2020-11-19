@@ -5,67 +5,57 @@
         transform: scale(1.2)
 .div
     animation: zoom linear .2s
-@keyframes moveInLeft 
-    0% 
+@keyframes moveInLeft
+    0%
         opacity: 0
         transform: translateX(-10rem)
-    
 
-    80% 
+    80%
         transform: translateX(1rem)
-    
 
-    100% 
+    100%
         opacity: 1
         transform: translateX(0)
-    
 
-
-@keyframes moveInRight 
-    0% 
+@keyframes moveInRight
+    0%
         opacity: 0
         transform: translateX(10rem)
-    
 
-    80% 
+    80%
         transform: translateX(-1rem)
-    
 
-    100% 
+    100%
         opacity: 1
         transform: translateX(0)
-    
 
-
-@keyframes moveInBottom 
-    0% 
+@keyframes moveInBottom
+    0%
         opacity: 0
         transform: translateY(3rem)
-    
 
-    100% 
+    100%
         opacity: 1
         transform: translateY(0)
-    
-@-webkit-keyframes returnToNormal 
-    from 
-        opacity: 0
-        -webkit-transform: translate3d(0, 100%, 0)
-        transform: translate3d(0, 100%, 0)
-    to 
-        opacity: 1
-        -webkit-transform: none
-        transform: none
-@keyframes returnToNormal 
-    from 
-        opacity: 0
-        -webkit-transform: translate3d(0, 100%, 0)
-        transform: translate3d(0, 100%, 0)
-    to 
-        opacity: 1
-        -webkit-transform: none
-        transform: none
 
+@-webkit-keyframes returnToNormal
+    from 
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+    to 
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+@keyframes returnToNormal
+    from
+        opacity: 0
+        -webkit-transform: translate3d(0, 100%, 0)
+        transform: translate3d(0, 100%, 0)
+    to
+        opacity: 1
+        -webkit-transform: none
+        transform: none
 
 @keyframes growth
     from
@@ -77,3 +67,15 @@
         opacity: 0
     to
         opacity: 1
+.zoom-out
+    .img
+        overflow: hidden
+        img
+            transition: all .5s
+            transform: scale(1)
+    &:hover
+        box-shadow: 0 0 11px rgba(33,33,33,.2)
+        .img
+            img
+                transition: all .5s
+                transform: scale(1.03)

@@ -191,32 +191,35 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		background: url("../assets/tuyen-dung/bg.png") no-repeat center
+		background: url("../assets/icons/netco.png") no-repeat center
 		height: 310px
 		text-align: center
 		.title-sub
-			max-width: 375px
-			color: $red
-			font-size: 26/16*1rem
+			width: 375px
+			padding: 0 42px
+			color: #c10016
+			font-family: Montserrat
+			font-size: 26px
 			font-weight: 700
+			font-style: normal
+			letter-spacing: normal
+			line-height: 44px
+			text-align: center
 			text-transform: uppercase
-	[class*='col-']:nth-child(n+4) .item
-		margin-top: 30px
-	[class*='col-']:nth-child(n+2) .item
-		@media screen and ( max-width: 991px )
-			margin-top: 30px
-	[class*='col-']:nth-child(n+1) .item
-		@media screen and ( max-width: 767px )
-			margin-top: 30px
 	.item
-		display: block
+		display: flex
 		position: relative
+		flex-direction: column
+		justify-content: space-between
 		width: 100%
 		height: 310px
 		text-align: center
 		border-radius: 50px
 		background-color: #f3f3f3
 		padding: 57px 0 23px
+		overflow: hidden
+		cursor: pointer
+		margin-bottom: 30px
 		.img
 			width: 101px
 			height: 101px
@@ -225,67 +228,142 @@
 				width: 100%
 				height: 100%
 				object-fit: cover
-		.content
-			display: flex
-			align-items: flex-end
-			justify-content: center
-			padding: 40px 20px 20px
+		.title
+			padding: 0 45px
 			color: #333333
-			font-size: 14px
+			font-family: Montserrat
+			font-size: 14/16*1rem
 			font-weight: 400
-			height: 38px
-			margin-top: 30px
-		.material-icons
-			font-size: 30px
-			color: $red
-		&:hover
+			font-style: normal
+			letter-spacing: normal
+			line-height: 24px
+			text-align: center
+		.content
+			position: absolute
+			width: 100%
+			height: 100%
+			padding: 20px
+			padding-right: 1rem
+			padding-top: 27px
+			top: 100%
+			left: 0
+			opacity: 0
+			visibility: hidden
+			z-index: 10
+			border-radius: 50px
 			background-color: $red
-			transition: all .3s ease-in-out
-			*
-				color: white
-		&.detail
-			padding: 27px 21px 27px 27px
-			text-align: left
-			.title
-				display: block
+			transition: all .5s
+			.content-title
+				color: #ffffff
+				font-size: 16px
 				font-weight: 700
-				margin-bottom: 15px
-			.content-2
-				display: block
+				font-style: normal
+				letter-spacing: normal
+				line-height: 24px
+				text-align: left
+				text-transform: uppercase
+			.desc
+				position: relative
+				padding-top: .9rem
+				padding-right: .9rem
+				max-height: 180px
+				overflow-y: auto
+				color: #ffffff
+				font-family: Montserrat
 				font-size: 14px
-				line-height: 24/16*1rem
-				@media screen and ( max-width: 991px )
-					height: 200px
-					overflow: scroll
-		&.no-pad
-			padding: 0
-			position: relative
-			video
-				width: 100%
-				height: 100%
-				border-radius: 50px
-			.play
+				font-weight: 400
+				font-style: normal
+				letter-spacing: normal
+				line-height: 24px
+				text-align: left
+				z-index: 9
+				&::-webkit-scrollbar-track
+					box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+					background-color: $red
+
+				&::-webkit-scrollbar
+					width: 5px
+					height: 5px
+					background-color: $red
+
+				&::-webkit-scrollbar-thumb
+					box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+					background-color: rgba($color: #000000, $alpha: .2)
+			.img
 				position: absolute
 				top: 50%
 				left: 50%
-				transform: translate(-50%,-50%)
-				opacity: 0
-				*
-					font-size: 46px
-					color: white
-			.text
-				position: absolute
-				bottom: 25px
-				color: white
-				text-align: center
-				font-size: 16px
-				font-weight: bold
+				z-index: 0
+				transform: translate(-50%, -50%)
+				img
+					filter: brightness(0) invert(1)
+					opacity: .2
+		.material-icons
+			margin-top: -20px
+			font-size: 30px
+			color: $red
+		&:hover
+			.content
+				top: 0
+				opacity: 1
+				visibility: visible
+				transition: all .5s
+	.popup
+		display: flex
+		position: relative
+		flex-direction: column
+		justify-content: space-between
+		width: 100%
+		height: 310px
+		border-radius: 50px
+		background-color: #f3f3f3
+
+		.img-popup
+			position: relative
+			width: 100%
+			height: 100%
+			cursor: pointer
+			img
 				width: 100%
-				opacity: 0
-			&:hover
-				transition: .2s all ease-in-out
-				.play, .text
-					opacity: 1
+				height: 100%
+				object-fit: cover
+				border-radius: 50px
+				object-position: right
+			&::after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				border-radius: 50px
+				top: 0
+				left: 0
+				pointer-events: auto
+				background-color: rgba($color: #000000, $alpha: .5)
+		.material-icons
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			color: #ffffff
+			font-size: 48px
+			font-weight: 400
+			font-style: normal
+			letter-spacing: normal
+			line-height: 32px
+			text-align: left
+		.popup-title
+			position: absolute
+			padding: 0 20px
+			top: 80%
+			left: 0
+			color: #ffffff
+			font-family: Montserrat
+			font-size: 1rem
+			font-weight: 700
+			font-style: normal
+			letter-spacing: normal
+			line-height: 20px
+			text-align: center
 .tuyendung-4
 	background-color: #fbf7ef
 	.on-row
@@ -358,3 +436,190 @@
 			object-fit: cover
 			@media screen and ( min-width: 1366px )
 				border-radius: 250px
+.recuirement-detail
+	.title
+		color: $red
+		font-size: 30/16*1rem
+		font-weight: 700
+		margin-bottom: 25/16*1rem
+		@media screen and ( max-width: 1024.98px)
+			font-size: 20/16*1rem
+			margin-bottom: 10px
+	.title-2
+		font-size: 18/16*1rem
+		text-transform: uppercase
+		margin-bottom: 17px
+	.section-sub
+		display: flex
+		justify-content: space-between
+		padding-bottom: 20px
+		margin-bottom: 30px
+		border-bottom: 2px solid #e1e1e1
+		@media screen and ( max-width: 1024.98px)
+			margin-bottom: 20px
+			padding-bottom: 10px
+		.sub-date
+			display: block
+			color: #999999
+			font-size: 14/16*1rem
+			line-height: 32/16*1rem
+		.social
+			display: flex
+			align-items: center
+			.social-item
+				display: flex
+				align-items: center
+				height: 20px
+				padding: 0 5px
+				border-radius: 3px
+				i
+					padding-right: 5px
+			.social-item *
+				color: white
+				font-size: 12px
+				font-weight: 500
+			.face
+				background-color: #5072b7
+				margin-right: 10px
+			.twitter
+				background-color: #1b95e0
+	table
+		margin-bottom: 30px
+		width: 100%
+		tr
+			display: flex
+			align-items: center
+			width: 100%
+			padding: 10px 0
+			height: 40px
+			@media screen and ( max-width: 1520px )
+				height: auto
+			td:first-child
+				width: 310px
+				padding-left: 39px
+				font-size: 16px
+				color: #333333
+				font-weight: 600
+				line-height: 40/16*1rem
+				@media screen and ( max-width: 768px )
+					width: 50%
+				@media screen and ( max-width: 480px )
+					padding-left: 15px
+					line-height: inherit
+
+			td:last-child
+				font-size: 16px
+				font-weight: 400
+				color: #333333
+		tr:nth-child(odd)
+			background-color: #f3f3f3
+		tr:last-child
+			border-bottom: 1px solid #f3f3f3
+		.danger
+			color: #e5212a!important
+	.list-content
+		.item
+			padding-bottom: 27/16*1rem
+			.content-title
+				color: $red
+				font-size: 18/16*1rem
+				font-weight: 600
+				font-style: normal
+				letter-spacing: normal
+				line-height: 28px
+				text-align: left
+				text-transform: uppercase
+			ul
+				padding-left: 0
+				list-style: none
+				li
+					padding-left: 20px
+					position: relative
+					p
+						color: #333333
+						font-size: 14/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 24px
+						text-align: left
+						a
+							color: #0042b4
+							font-weight: 500
+							font-style: italic
+							letter-spacing: normal
+							line-height: normal
+							text-decoration: underline
+					&::before
+						position: absolute
+						top: 50%
+						left: 0
+						transform: translateY(-50%)
+						content: 'fiber_manual_record'
+						font-family: Material icons
+						font-size: 8px
+						color: #d1d1d1
+	.section-btn
+		display: flex
+		margin-top: 40/16*1rem
+		@media screen and ( max-width: 576px )
+			flex-direction: column
+			align-items: center
+			margin-top: 25px
+		.btn-item
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 16px
+			padding: 16px 26px 15px
+			color: white
+			text-transform: uppercase
+			border-radius: 25px
+			&.btn-red
+				background-color: $red
+				margin-right: 20px
+				@media screen and ( max-width: 576px )
+					margin-right: 0
+			&.btn-blue
+				background-color: #0042b4
+				i
+					padding-right: 8px
+				@media screen and ( max-width: 576px )
+					margin-top: 10px
+			&:hover
+				transform: translateY(-3px)
+				transition: all .3s ease-in-out
+	.recuirement-other
+		@media screen and (max-width: 991px)
+			margin-top: 30px
+		.recuirement-header
+			padding: 16px 23px
+			background-color: $red
+			border-radius: 5px 5px 0 0
+			.title
+				font-size: 16px
+				line-height: 28/16*1rem
+				color: #ffffff
+				text-transform: uppercase
+				margin-bottom: 0
+				font-weight: 600
+				letter-spacing: .5px
+				@media screen and ( max-width: 1024.98px)
+					font-size: 14/16*1rem
+		.recuirement-body
+			height: 80px
+			border-radius: 5px
+			background-color: #fbf7ef
+			padding: 22px 20px
+			margin-top: 10px
+			@media screen and ( max-width: 1520px )
+				height: auto
+			a
+				display: block
+				font-size: 16px
+				color: $red
+				font-weight: 700
+			.content-sub
+				display: block
+				font-size: 12px
+				color: #999999

@@ -49,6 +49,8 @@
 				.content
 					font-size: 13/16*1rem
 	iframe
+		@media screen and ( min-width: 991.1px )
+			position: absolute
 		width: 100%
 		box-shadow: 0 0px 20px -9px #a0b0c1
 		border-top-left-radius: 10px
@@ -82,14 +84,18 @@
 	textarea
 		height: 100px
 		padding-top: 15px
+	.frm-btnwrap
+		.frm-btn
+			max-width: 170px
+			display: flex
+			justify-content: flex-end
+			@media screen and ( min-width: 1366px )	
+				margin-left: auto
+				margin-right: 15px 
+			@media screen and (max-width: 991px)
+				max-width: 100%
+				margin: 0 auto
 	.frm-submit
-		max-width: 530px
-		display: flex
-		justify-content: flex-end
-		@media screen and (max-width: 991px)
-			max-width: 100%
-			justify-content: center
-	.submit
 		display: flex
 		align-items: center
 		position: relative
@@ -120,3 +126,19 @@
 			padding-right: 15px!important
 		.pl-0
 			padding-left: 15px!important
+	.frm-captcha
+		display: flex
+		position: relative
+		align-items: center
+		.rcRefreshImage
+			font-size: 0
+			&:before
+				content: "\f2f9"
+				color: #c10016
+		.frm-captcha-input
+			.input
+				position: absolute
+				right: 15px
+				top: 0
+				height: 50px
+				width: 170px

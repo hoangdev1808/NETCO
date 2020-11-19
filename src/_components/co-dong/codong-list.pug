@@ -1,0 +1,13 @@
+section.kv-section.list-codong
+	.container
+		.row
+			-for(i=1;i<9;i++)
+				.col-lg-4.col-md-6.col-sm-6.col-12
+					a.list-item.zoom-out(href="co-dong-chi-tiet.html")
+						.img
+							img(src="./assets/codong/cd-"+i+".png", alt="")
+						.list-content
+							.title Báo cáo tài chính
+							.list-seemore
+								span Xem thêm
+								span.lnr.lnr-arrow-right

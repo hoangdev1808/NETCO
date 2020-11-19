@@ -1,0 +1,94 @@
+section.kv-section.news-pages
+	.container
+		.caption
+			.title Tin mới nhất
+		.specialist
+			.row
+				.col-lg-6.col-left
+					.item
+						.big-img
+							a(href="tin-tuc-chi-tiet.html")
+								img(src="./assets/News/i-1.png" alt="")
+						.content
+							.title
+								a(href="tin-tuc-chi-tiet.html") NETCO lọt Top 100 Thương hiệu hàng đầu Việt 2018, 2019
+							time 20/07/2020
+							.desc Hiện tại, các sản phẩm chính của NETCO bao gồm: bột giặt, nước rửa chén, nước lau sàn nhà và nước xả vải, trong đó bột giặt là nhóm sản phẩm chủ lực và truyền thống của Công ty
+				.col-lg-6.col-right
+					-for(i=2; i<5; i++)
+						.item
+							.small-img
+								a(href="tin-tuc-chi-tiet.html")
+									img(src="./assets/News/i-"+i+".png" alt="")
+							.content
+								.title
+									a(href="tin-tuc-chi-tiet.html") NETCO tung ra sản phẩm mới nhân dịp 20/10 dành cho phụ nữ Việt Nam
+								time 20/07/2020
+		.category-news
+			.wrapper-header
+				.title tin thị trường
+				.wrapper-buttom
+					a(href="tin-tuc-ds.html") xem tất cả
+						em.material-icons apps
+			.row
+				-for(i=5; i<9; i++)
+					.col-lg-3
+						.item
+							.img
+								a(href="tin-tuc-chi-tiet.html")
+									img(src="./assets/News/i-"+i+".png" alt="")
+							.content
+								.title
+									a(href="tin-tuc-chi-tiet.html") NETCO lọt Top 100 Thương hiệu hàng đầu Việt 2018, 2019
+								time 20/07/2020
+		.category-news
+			.wrapper-header
+				.title tin thị trường
+				.wrapper-buttom
+					a(href="tin-tuc-ds.html") xem tất cả
+						em.material-icons apps
+			.row
+				-for(i=9; i<13; i++)
+					.col-lg-3
+						.item
+							.img
+								a(href="")
+									img(src="./assets/News/i-"+i+".png" alt="")
+							.content
+								.title
+									a(href="") NETCO lọt Top 100 Thương hiệu hàng đầu Việt 2018, 2019
+								time 20/07/2020
+		.category-news
+			.wrapper-header
+				.title tin thị trường
+				.wrapper-buttom
+					a(href="video.html") xem tất cả
+						em.material-icons apps
+			.row
+				-for(i=13; i<17; i++)
+					.col-lg-3
+						.item
+							.img.opacity
+								a(href="https://www.youtube.com/watch?v=fMgQlG-x428&feature=emb_title" data-fancybox="Video")
+									img(src="./assets/News/i-"+i+".png" alt="")
+								a(href="https://www.youtube.com/watch?v=fMgQlG-x428&feature=emb_title" data-fancybox="Video")
+									em.material-icons play_circle_outline
+		.category-news
+			.wrapper-header
+				.title tin thị trường
+				.wrapper-buttom
+					a(href="thu-vien-anh.html") xem tất cả
+						em.material-icons apps
+			.row
+				-for(i=17; i<21; i++)
+					.col-lg-3
+						.item
+							.img.opacity
+								a(href="./assets/News/i-"+i+".png" data-fancybox="images")
+									img(src="./assets/News/i-"+i+".png" alt="")
+								a(href="./assets/News/i-"+i+".png" data-fancybox="images")
+									em.material-icons insert_photo
+							
+
+
+

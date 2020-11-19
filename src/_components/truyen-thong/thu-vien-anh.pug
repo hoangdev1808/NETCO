@@ -1,0 +1,38 @@
+.zone-nav
+	.box-category
+		p Danh mục
+		em.material-icons expand_more
+	ul
+		li
+			a(href="tin-tuc-ds.html") hoạt động công ty
+		li
+			a(href="tin-tuc-ds.html") tin thị trường
+		li
+			a(href="video.html") video clips
+		li.active
+			a(href="thu-vien-anh.html") thư viện ảnh
+section.kv-section.library-page
+	.container
+		.caption
+			.title Video Clips
+		.row
+			-for(i=5; i<14; i++)
+				.col-lg-4
+					.item
+						.img.opacity
+							a(href="./assets/News/i-"+i+".png" data-fancybox="images")
+								img(src="./assets/News/i-"+i+".png" alt="")
+							a(href="./assets/News/i-"+i+".png" data-fancybox="images")
+								em.material-icons insert_photo
+						.content
+							.title
+								a(href="./assets/News/i-"+i+".png" data-fancybox="images") NETCO lọt Top 100 Thương hiệu hàng đầu Việt 2018, 2019
+		.pages 
+			.modulepager
+				ul.pagination 
+					li.active
+						a(href="")  1
+					li 
+						a(href="") 2
+					li 
+						a(href="") 3
