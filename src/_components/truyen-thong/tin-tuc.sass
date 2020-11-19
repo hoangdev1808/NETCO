@@ -1,0 +1,449 @@
+.news-pages
+	.caption
+		.title
+			margin-bottom: 25px
+	.specialist
+		margin-bottom: 60px
+		.col-left
+			.item
+				width: 100%
+				height: 100%
+				.big-img
+					width: 100%
+					height: 390px
+					overflow: hidden
+					border-radius: 10px 10px 0 0
+					img
+						width: 100%
+						height: 100%
+						transform: scale(1)
+						transition: all .5s
+						object-fit: cover
+						object-position: bottom
+						border-radius: 10px 10px 0 0
+				.content
+					padding: 27px 30px
+					width: 100%
+					border-radius: 0 0 10px 10px
+					background-color: #fbf7ef
+					.title
+						a
+							color: $red
+							font-size: 22/16*1rem
+							font-weight: 600
+							font-style: normal
+							letter-spacing: normal
+							line-height: 30px
+							text-align: left
+					time
+						color: #999999
+						font-size: 12/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 32px
+						text-align: left
+					.desc
+						color: #666666
+						font-size: 14/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 20px
+						text-align: left
+		.col-right
+			.item
+				display: flex
+				margin-bottom: 20px
+				.small-img
+					max-width: 285px
+					height: 185px
+					overflow: hidden
+					border-radius: 10px 0 0 10px
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+						transform: scale(1)
+						transition: all .5s
+						border-radius: 10px 0 0 10px
+				.content
+					padding: 20px
+					padding-left: 30px
+					width: 100%
+					border-radius: 0 10px 10px 0
+					background-color: #fbf7ef
+					.title
+						a
+							color: $red
+							font-size: 18/16*1rem
+							font-weight: 600
+							font-style: normal
+							letter-spacing: normal
+							line-height: 24px
+							text-align: left
+					time
+						color: #999999
+						font-size: 12/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 32px
+						text-align: left
+				&:last-child
+					margin-bottom: 0
+		.item
+			&:hover
+				.big-img,
+				.small-img
+					img
+						transform: scale(1.05)
+						transition: all .5s
+				.content
+					.title
+						text-decoration: underline
+	.category-news
+		margin-bottom: 30px
+		.wrapper-header
+			margin-bottom: 30px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			border-bottom: solid 2px $red
+			.title
+				width: 245px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 5px 5px 0 0
+				background-color: $red
+				color: #ffffff
+				font-size: 1rem
+				font-weight: 700
+				font-style: normal
+				line-height: 32px
+				text-transform: uppercase
+				letter-spacing: 0.8px
+			.wrapper-buttom
+				a
+					display: flex
+					align-items: center
+					color: $red
+					font-size: 14/16*1rem
+					font-weight: 500
+					line-height: 32px
+					text-align: left
+					text-transform: uppercase
+					letter-spacing: 0.7px
+					.material-icons
+						padding-left: 14px
+						color: $red
+						font-size: 18/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 32px
+		.item
+			.img
+				width: 100%
+				height: 185px
+				border-radius: 10px
+				overflow: hidden
+				img
+					width: 100%
+					height: 100%
+					border-radius: 10px
+					object-fit: cover
+					transform: scale(1)
+					transition: all .5s
+				&.opacity
+					position: relative
+					width: 285px
+					height: 185px
+					margin-bottom: 40px
+					.material-icons
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						color: #ffffff
+						font-size: 48/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 32px
+						z-index: 2
+					&::after
+						position: absolute
+						width: 100%
+						height: 100%
+						content: ''
+						top: 0
+						left: 0
+						pointer-events: none
+						border-radius: 10px
+						background-color: rgba($color: #000000, $alpha: .4)
+			.content
+				padding: 19px 10px
+				.title
+					a
+						color: #333333
+						font-size: 16px
+						font-weight: 600
+						font-style: normal
+						letter-spacing: normal
+						line-height: 20px
+				time
+					color: #999999
+					font-size: 12/16*1rem
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					line-height: 32px
+					text-align: left
+
+			&:hover
+				.img
+					img
+						transform: scale(1.05)
+						transition: all .5s
+				.content
+					.title
+						a
+							text-decoration: underline
+							color: $red
+		&:last-child
+			margin-bottom: 0
+			.item
+				.img
+					&.opacity
+						margin-bottom: 0
+.category-news-pages
+	.col-left
+		.item-big
+			width: 100%
+			height: 100%
+			border-radius: 10px 10px 0 0
+			.big-img
+				width: 100%
+				height: 390px
+				overflow: hidden
+				border-radius: 10px 10px 0 0
+				img
+					width: 100%
+					height: 100%
+					transform: scale(1)
+					transition: all .5s
+					object-fit: cover
+					object-position: bottom
+					border-radius: 10px 10px 0 0
+			.content
+				padding: 27px 30px
+				width: 100%
+				border-radius: 0 0 10px 10px
+				background-color: #fbf7ef
+				.title
+					a
+						color: $red
+						font-size: 22/16*1rem
+						font-weight: 600
+						font-style: normal
+						letter-spacing: normal
+						line-height: 30px
+						text-align: left
+				time
+					color: #999999
+					font-size: 12/16*1rem
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					line-height: 32px
+					text-align: left
+				.desc
+					color: #666666
+					font-size: 14/16*1rem
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					line-height: 20px
+					text-align: left
+	.col-right
+		.item-big
+			display: flex
+			margin-bottom: 20px
+			.small-img
+				max-width: 285px
+				height: 185px
+				overflow: hidden
+				border-radius: 10px 0 0 10px
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+					transform: scale(1)
+					transition: all .5s
+					border-radius: 10px 0 0 10px
+			.content
+				padding: 20px
+				padding-left: 30px
+				width: 100%
+				border-radius: 0 10px 10px 0
+				background-color: #fbf7ef
+				.title
+					a
+						color: $red
+						font-size: 18/16*1rem
+						font-weight: 600
+						font-style: normal
+						letter-spacing: normal
+						line-height: 24px
+						text-align: left
+				time
+					color: #999999
+					font-size: 12/16*1rem
+					font-weight: 400
+					font-style: normal
+					letter-spacing: normal
+					line-height: 32px
+					text-align: left
+			&:last-child
+				margin-bottom: 0
+	.item-small
+		margin-top: 30px
+		border-radius: 10px 10px 0 0
+		.img
+			width: 100%
+			height: 253px
+			border-radius: 10px
+			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				border-radius: 10px
+				object-fit: cover
+				transform: scale(1)
+				transition: all .5s
+		.content
+			padding: 19px 10px
+			.title
+				a
+					color: $red
+					font-size: 1rem
+					font-weight: 600
+					font-style: normal
+					letter-spacing: normal
+					line-height: 20px
+			time
+				color: #999999
+				font-size: 12/16*1rem
+				font-weight: 400
+				font-style: normal
+				letter-spacing: normal
+				line-height: 32px
+				text-align: left
+	.item-small,
+	.item-big
+		&:hover
+			.big-img,
+			.small-img,
+			.img
+				img
+					transform: scale(1.05)
+					transition: all .5s
+			.content
+				.title
+					a
+						text-decoration: underline
+.library-page
+	.caption
+		.title
+			margin-bottom: 31px
+	.item
+		margin-bottom: 30px
+		.img
+			width: 100%
+			height: 253px
+			border-radius: 10px 10px 00
+			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				border-radius: 10px 10px 0 0
+				object-fit: cover
+				transform: scale(1)
+				transition: all .5s
+			&.opacity
+				position: relative
+				.material-icons
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					color: #ffffff
+					font-size: 48/16*1rem
+					font-weight: 400
+					letter-spacing: normal
+					line-height: 32px
+					z-index: 2
+				&::after
+					position: absolute
+					width: 100%
+					height: 100%
+					content: ''
+					top: 0
+					left: 0
+					pointer-events: none
+					border-radius: 10px 10px 0 0
+					background-color: rgba($color: #000000, $alpha: .4)
+		.content
+			transition: all .5s
+			padding: 18px 40px 24px 29px
+			border-radius: 0 0 10px 10px
+			background-color: #fbf7ef
+			.title
+				a
+					color: $red
+					font-size: 16px
+					font-weight: 600
+					letter-spacing: normal
+					line-height: 20px
+					text-align: left
+		&:hover
+			.img
+				img
+					transform: scale(1.05)
+					transition: all .5s
+			.content
+				background-color: $red
+				transition: all .5s
+				.title
+					a
+						color: #ffffff
+.detail-page
+	.title
+		color: #c10016
+		font-size: 30/16*1rem
+		font-weight: 700
+		font-style: normal
+		letter-spacing: normal
+		line-height: 24px
+		padding-bottom: 10px
+		@media screen and ( max-width: 991px)
+			font-size: 20/16*1rem
+	.full-content
+		padding-top: 25px
+		p
+			font-size: 16px
+			color: $color-text
+			line-height: 1.5
+			padding-bottom: 17px
+			strong
+				text-transform: uppercase
+			img
+				width: 100%
+		ul
+			padding-left: 20px
+		@media screen and ( max-width: 991px)
+			margin-bottom: 30px
+			padding-top: 10px

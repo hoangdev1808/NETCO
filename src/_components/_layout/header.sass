@@ -72,6 +72,7 @@
 					width: 20px
 					height: 20px
 					border-radius: 50%
+					object-fit: cover
 			#search-box
 				position: absolute
 				display: none
@@ -82,6 +83,8 @@
 					margin-bottom: 0
 					display: flex
 					padding: 7px
+					.searchbox
+						display: flex
 					input
 						border: none
 						border-bottom: solid 1px #ffffff
@@ -97,6 +100,11 @@
 						color: #ffffff
 		.nav-left,
 		.nav-right
+			.Module
+				width: 100%
+				.ModuleContent
+					width: 100%
+					display: flex
 			.nav-item
 				.nav-link
 					font-size: .9375rem

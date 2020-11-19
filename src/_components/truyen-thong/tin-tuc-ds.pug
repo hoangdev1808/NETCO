@@ -1,0 +1,57 @@
+.zone-nav
+	.box-category
+		p Danh mục
+		em.material-icons expand_more
+	ul
+		li.active
+			a(href="tin-tuc-ds.html") hoạt động công ty
+		li
+			a(href="tin-tuc-ds.html") tin thị trường
+		li
+			a(href="video.html") video clips
+		li
+			a(href="thu-vien-anh.html") thư viện ảnh
+section.kv-section.category-news-pages
+	.container
+		.caption
+			.title Tin mới nhất
+		.row
+			.col-lg-6.col-left
+				.item-big
+					.big-img
+						a(href="tin-tuc-chi-tiet.html")
+							img(src="./assets/News/i-1.png" alt="")
+					.content
+						.title
+							a(href="tin-tuc-chi-tiet.html") NETCO lọt Top 100 Thương hiệu hàng đầu Việt 2018, 2019
+						time 20/07/2020
+						.desc Hiện tại, các sản phẩm chính của NETCO bao gồm: bột giặt, nước rửa chén, nước lau sàn nhà và nước xả vải, trong đó bột giặt là nhóm sản phẩm chủ lực và truyền thống của Công ty
+			.col-lg-6.col-right
+				-for(i=2; i<5; i++)
+					.item-big
+						.small-img
+							a(href="tin-tuc-chi-tiet.html")
+								img(src="./assets/News/i-"+i+".png" alt="")
+						.content
+							.title
+								a(href="tin-tuc-chi-tiet.html") NETCO tung ra sản phẩm mới nhân dịp 20/10 dành cho phụ nữ Việt Nam
+							time 20/07/2020
+			-for(i=5; i<8; i++)
+				.col-lg-4
+					.item-small
+						.img
+							a(href="tin-tuc-chi-tiet.html")
+								img(src="./assets/News/i-"+i+".png" alt="")
+						.content
+							.title
+								a(href="") NETCO lọt Top 100 Thương hiệu hàng đầu Việt 2018, 2019
+							time 20/07/2020
+		.pages 
+			.modulepager
+				ul.pagination 
+					li.active
+						a(href="")  1
+					li 
+						a(href="") 2
+					li 
+						a(href="") 3

@@ -232,10 +232,11 @@ function phantrang() {
 
 function changePlaceholder() {
     $('.subscribe .form-group input ').attr('placeholder', 'Nhập email...');
+    $('.frm-captcha .frm-captcha-input input').attr('placeholder', 'Nhập mã Capcha');
 }
 
 function breadCrumb() {
-    $('.global-breadcrumb').appendTo('#page-banner .banner__pages .content .container')
+    $('.global-breadcrumb').appendTo('#page-banner .banner__pages .content .container');
 }
 
 function category() {
@@ -354,6 +355,10 @@ function quantityNumber() {
         console.log(plus)
         $(this).parents('.input-group').find('input').val(plus + 1);
     });
+}
+function moveForm() {
+    $('.contact-right-col .wrap-form .frm-captcha').appendTo('.contact-right-col .contact-form')
+    $('.contact-right-col .wrap-form .frm-btnwrap').appendTo('.contact-right-col .contact-form')
 }
 
 // if ($(window).width() > 1025) {
@@ -536,6 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
     crollTop();
     MultiLevelAccordiion();
     quantityNumber();
+    moveForm();
     setTimeout(() => {
         $('section:first-child').addClass('current-page')
     }, 100);
