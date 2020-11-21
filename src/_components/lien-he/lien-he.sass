@@ -56,6 +56,8 @@
 				&:nth-child(2)
 					margin: 10px 0
 	iframe
+		@media screen and ( min-width: 991.1px )
+			position: absolute
 		width: 100%
 		box-shadow: 0 0px 20px -9px #a0b0c1
 		border-top-left-radius: 10px
@@ -94,14 +96,21 @@
 			max-width: 170px
 			display: flex
 			justify-content: flex-end
+			@media screen and ( min-width: 1366px )	
+				margin-left: auto
+				margin-right: 15px 
 			@media screen and (max-width: 991px)
 				max-width: 100%
-				justify-content: center
-	.submit
+				margin: 0 auto
+	.frm-submit
 		display: flex
 		align-items: center
 		position: relative
 		width: 170px
+		margin: 0 auto
+		@media screen and ( min-width: 991.1px )
+			margin-left: auto
+			margin-right: 15px: 
 		.material-icons
 			position: absolute
 			right: 45px
@@ -128,3 +137,16 @@
 			padding-right: 15px!important
 		.pl-0
 			padding-left: 15px!important
+	.frm-captcha
+		display: flex
+		position: relative
+		align-items: center
+		.rcRefreshImage
+			font-size: 0
+		.frm-captcha-input
+			.input
+				position: absolute
+				right: 15px
+				top: 0
+				height: 50px
+				width: 170px
