@@ -98,23 +98,103 @@
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: top
+		margin-top: 170px
+		padding-bottom: 70px
 		.list-ellip
 			max-width: 657px
 			margin: 0 auto
 			display: flex
+			align-items: center
+			transform: translateY(-40%)
 
 			.item
+				display: flex
+				align-items: center
 				margin-right: auto
 				width: 180px
 				height: 180px
 				border-radius: 50%
 				background-color: #0042b4
 				background-image: radial-gradient(circle 127px at 1.66% 0.31%, #e5212a 0%, #8b0010 100%)
+				.content
+					width: 100%
+					height: 100%
+					padding: 30px 0
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: space-around
+					.title
+						color: #ffffff
+						font-size: 14/16*1rem
+						font-weight: 700
+						font-style: normal
+						letter-spacing: normal
+						line-height: 24px
+						text-align: center
+						text-transform: uppercase
+					.number
+						display: flex
+						justify-content: center
+						.counter,
+						span
+							color: #ffffff
+							font-size: 40/16*1rem
+							font-weight: 900
+							font-style: normal
+							letter-spacing: normal
+							line-height: 24px
+							text-align: center
+					.brife-content
+						padding: 0 30px
+						font-size: 14/16*1rem
+						color: rgb(255, 255, 255)
+						text-align: center
 				&:nth-child(2)
 					width: 220px
 					height: 220px
 				&:last-child
 					margin-right: 0
+		.list-items
+			max-width: 1020px
+			margin: 0 auto
+			.item
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-bottom: 20px
+				.col-left-content
+					width: 495px
+					padding: 35px
+					box-shadow: 6px 8px 50px rgba(0, 0, 0, 0.05)
+					border-radius: 50px
+					background-color: #ffffff
+					.desc
+						p
+							color: #333333
+							font-size: 15/16*1rem
+							font-weight: 400
+							font-style: normal
+							letter-spacing: normal
+							line-height: 24px
+							text-align: left
+							padding-bottom: 20px
+				.col-right-image
+					.img
+						width: 450px
+						height: 450px
+				&:nth-child(even)
+					.col-left-content
+						order: 2
+						background-color: $red
+						.desc
+							p
+								color: #ffffff
+					.col-right-image
+						order: 1
+						.img
+							display: flex
+							align-items: center
 #about-6
 	background-image: url('../assets/about/bg-2.png')
 	background-size: 100% 100%

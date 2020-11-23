@@ -102,6 +102,51 @@
 				.content
 					.title
 						text-decoration: underline
+		@media screen and ( max-width: 1199.98px)
+			.col-left
+				.item
+					.content
+						padding: 17px
+			.col-right
+				.item
+					width: 100%
+					.small-img
+						max-width: 220px
+					.content
+						padding: 1rem
+		@media screen and ( max-width: 991.98px)
+			.col-left
+				margin-bottom: 20px
+				.item
+					.big-img
+						height: 420px
+			.col-right
+				.item
+					.small-img
+						max-width: 50%
+					.content
+						width: 50%
+		@media screen and ( max-width: 575.98px)
+			.col-right
+				.item
+					.small-img
+						height: 177px
+		@media screen and ( max-width: 375.98px)
+			.col-left
+				.item
+					.big-img
+						height: 250px
+			.col-right
+				.item
+					flex-direction: column
+					.small-img
+						max-width: 100%
+						height: 250px
+						border-radius: 10px 10px 0 0
+						img
+							border-radius: 10px 10px 0 0
+					.content
+						width: 100%
 	.category-news
 		margin-bottom: 30px
 		.wrapper-header
@@ -121,7 +166,6 @@
 				color: #ffffff
 				font-size: 1rem
 				font-weight: 700
-				font-style: normal
 				line-height: 32px
 				text-transform: uppercase
 				letter-spacing: 0.8px
@@ -159,7 +203,7 @@
 					transition: all .5s
 				&.opacity
 					position: relative
-					width: 285px
+					width: 100%
 					height: 185px
 					margin-bottom: 40px
 					.material-icons
@@ -213,12 +257,25 @@
 						a
 							text-decoration: underline
 							color: $red
+		
 		&:last-child
 			margin-bottom: 0
 			.item
 				.img
 					&.opacity
 						margin-bottom: 0
+		@media screen and ( max-width: 575.98px)
+			.item
+				.img
+					height: 350px
+		@media screen and ( max-width: 375.98px)
+			.wrapper-header
+				.title
+					width: 200px
+					font-size: 14/16*1rem
+			.item
+				.img
+					height: 225px
 .category-news-pages
 	.col-left
 		.item-big
@@ -355,6 +412,62 @@
 				.title
 					a
 						text-decoration: underline
+	@media screen and ( max-width: 1199.98px)
+		.col-left
+			.item-big
+				.content
+					padding: 17px
+		.col-right
+			.item-big
+				width: 100%
+				.small-img
+					max-width: 220px
+				.content
+					padding: 1rem
+	@media screen and ( max-width: 991.98px)
+		.col-left
+			margin-bottom: 20px
+			.item-big
+				.big-img
+					height: 420px
+		.col-right
+			.item-big
+				.small-img
+					max-width: 50%
+				.content
+					width: 50%
+	@media screen and ( max-width: 767.98px)
+		.item-small
+			.img
+				height: 155px
+	@media screen and ( max-width: 575.98px)
+		.col-right
+			.item-big
+				.small-img
+					height: 177px
+		.item-small
+			.img
+				height: 345px
+	@media screen and ( max-width: 375.98px)
+		.col-left
+			.item-big
+				.big-img
+					height: 250px
+		.col-right
+			.item-big
+				flex-direction: column
+				.small-img
+					max-width: 100%
+					height: 250px
+					border-radius: 10px 10px 0 0
+					img
+						border-radius: 10px 10px 0 0
+				.content
+					width: 100%
+		.item-small
+			margin-top: 20px
+			.img
+				height: 225px
 .library-page
 	.caption
 		.title
@@ -397,18 +510,18 @@
 					border-radius: 10px 10px 0 0
 					background-color: rgba($color: #000000, $alpha: .4)
 		.content
+			height: 75px
 			transition: all .5s
 			padding: 18px 40px 24px 29px
 			border-radius: 0 0 10px 10px
 			background-color: #fbf7ef
 			.title
-				a
-					color: $red
-					font-size: 16px
-					font-weight: 600
-					letter-spacing: normal
-					line-height: 20px
-					text-align: left
+				color: $red
+				font-size: 16px
+				font-weight: 600
+				letter-spacing: normal
+				line-height: 20px
+				text-align: left
 		&:hover
 			.img
 				img
@@ -418,8 +531,7 @@
 				background-color: $red
 				transition: all .5s
 				.title
-					a
-						color: #ffffff
+					color: #ffffff
 .detail-page
 	.title
 		color: #c10016
@@ -427,7 +539,6 @@
 		font-weight: 700
 		font-style: normal
 		letter-spacing: normal
-		line-height: 24px
 		padding-bottom: 10px
 		@media screen and ( max-width: 991px)
 			font-size: 20/16*1rem

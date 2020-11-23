@@ -1,4 +1,5 @@
 .tuyendung
+	padding-bottom: 0
 	table
 		width: 100%
 		@media screen and ( max-width: 1024px )
@@ -92,12 +93,6 @@
 					transition: .2s all ease-in-out
 .tuyendung-1
 	background-color: #fbf7ef
-	[class*='col-']:nth-child(n+3) .step-item
-		@media screen and ( max-width: 991px )
-			margin-top: 30px
-	[class*='col-']:nth-child(n+2) .step-item
-		@media screen and ( max-width: 767px )
-			margin-top: 30px
 	.step-item
 		position: relative
 		.step-ellipse
@@ -152,6 +147,8 @@
 			.content
 				font-size: 14px
 				color: #ffffff
+		@media screen and ( max-width: 991.98px)
+			margin-bottom: 30px
 .tuyendung-2
 	.img
 		height: 460px
