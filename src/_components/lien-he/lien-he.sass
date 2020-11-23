@@ -48,13 +48,6 @@
 			li
 				.content
 					font-size: 13/16*1rem
-		@media screen and ( max-width: 575px)
-			min-height: 220px
-			margin-bottom: 20px
-			padding: 1rem
-			li
-				&:nth-child(2)
-					margin: 10px 0
 	iframe
 		@media screen and ( min-width: 991.1px )
 			position: absolute
@@ -83,9 +76,17 @@
 					align-items: center
 					div
 						display: flex
-						left: 25%
+						left: 100px
 						position: absolute
 						align-items: center
+						@media screen and ( max-width: 1200px )
+							left: 0
+						@media screen and ( max-width: 991px )
+							left: 37%
+						@media screen and ( max-width: 768px )
+							left: 0
+						@media screen and ( max-width: 480px )
+							position: relative
 			.rcRefreshImage
 				font-size: 0
 				position: relative
@@ -93,6 +94,7 @@
 					position: absolute
 					font-family: Material Icons
 					font-size: 30px
+					font-weight: 500
 					content: "replay"
 					color: #c10016
 					left: 0
@@ -100,13 +102,16 @@
 					transform: translateY(-50%)
 			.frm-captcha-input
 				display: flex
-				position: relative
+				label
+					display: none
 				.input
 					position: absolute
 					right: -46%
 					top: 0
 					height: 50px
 					width: 170px
+					@media screen and ( max-width: 480px )
+						width: 100%
 	input,textarea
 		font-size: 16px
 		line-height: 28px
