@@ -66,6 +66,40 @@
 		border-top-right-radius: 10px
 		border-bottom-right-radius: 10px
 		box-shadow: 0 0px 20px -9px #a0b0c1
+		.frm-captcha
+			position: relative
+			display: flex
+			align-items: center
+			.RadCaptcha.RadCaptcha_Default
+				div
+					display: flex
+					align-items: center
+					div
+						display: flex
+						left: 25%
+						position: absolute
+						align-items: center
+			.rcRefreshImage
+				font-size: 0
+				position: relative
+				&::before
+					position: absolute
+					font-family: Material Icons
+					font-size: 30px
+					content: "replay"
+					color: #c10016
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+			.frm-captcha-input
+				display: flex
+				position: relative
+				.input
+					position: absolute
+					right: -46%
+					top: 0
+					height: 50px
+					width: 170px
 	input,textarea
 		font-size: 16px
 		line-height: 28px
@@ -103,7 +137,7 @@
 		margin: 0 auto
 		@media screen and ( min-width: 991.1px )
 			margin-left: auto
-			margin-right: 15px: 
+			margin-right: 15px
 		.material-icons
 			position: absolute
 			right: 45px
@@ -130,16 +164,4 @@
 			padding-right: 15px!important
 		.pl-0
 			padding-left: 15px!important
-	.frm-captcha
-		display: flex
-		position: relative
-		align-items: center
-		.rcRefreshImage
-			font-size: 0
-		.frm-captcha-input
-			.input
-				position: absolute
-				right: 15px
-				top: 0
-				height: 50px
-				width: 170px
+	
