@@ -129,6 +129,7 @@
                                 <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
                             </a>
                         </div>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         <time>
                             <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
                         </time>

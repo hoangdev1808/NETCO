@@ -5,13 +5,15 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/ZoneList">
         <div class="zone-nav">
-            <div class="box-category">
-                <p>Danh mục</p>
-                <em class="material-icons">expand_more</em>
+            <div class="container">
+                <div class="box-category">
+                    <p>Danh mục</p>
+                    <em class="material-icons">expand_more</em>
+                </div>
+                <ul>
+                    <xsl:apply-templates select="Zone"></xsl:apply-templates>
+                </ul>
             </div>
-            <ul>
-                <xsl:apply-templates select="Zone"></xsl:apply-templates>
-            </ul>
         </div>
     </xsl:template>
     <xsl:template match="Zone">

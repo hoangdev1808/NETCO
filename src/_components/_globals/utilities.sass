@@ -168,6 +168,7 @@
 	margin-left: auto
 	width: 100%
 	margin-top: 20px
+	margin-bottom: 20px
 
 	.modulepager
 		display: flex
@@ -885,12 +886,18 @@ html body input.RadInput_Empty
 			height: 100%
 			object-fit: contain
 	.content
-		padding-top: 30/16*1rem
+		margin: 0 auto
+		max-width: 220px
+		min-height: 132px
+		padding: 20/16*1rem
+		display: flex
+		flex: 1 1 0%
+		flex-direction: column
 		.product-title
-			max-width: 220px
-			margin: 0 auto
-			margin-bottom: 14/16*1rem
+			flex: 1 1 0%
+			margin-bottom: 20px
 			text-align: center
+			line-height: 1.25
 			a
 				color: #333333
 				font-size: 1rem
@@ -899,6 +906,8 @@ html body input.RadInput_Empty
 				letter-spacing: normal
 				line-height: 24px
 		.price-wrapper
+			display: flex
+			justify-content: center
 			.current
 				color: $red
 				font-size: 22/16*1rem

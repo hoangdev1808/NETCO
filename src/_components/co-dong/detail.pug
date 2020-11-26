@@ -1,14 +1,30 @@
+.zone-nav
+	.box-category
+		p Danh mục
+		em.material-icons expand_more
+	ul
+		li.active
+			a(href="tin-tuc-ds.html") hoạt động công ty
+		li
+			a(href="tin-tuc-ds.html") tin thị trường
+		li
+			a(href="video.html") video clips
+		li
+			a(href="thu-vien-anh.html") thư viện ảnh
 section.kv-section.ct-codong
 	.container
 		.caption
 			.title Báo cáo tài chính
 		.option
 			.span.sub Sắp xếp theo năm
-			.section-select
-				select(name="asdasd")
-					option(value="0") Tất cả
-					option(value="1") Tất cả
-					option(value="2") Tất cả
+			.dropdown.show
+				a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown')
+					| Tất cả
+				.dropdown-menu
+					a.dropdown-item(href='#') 2019
+					a.dropdown-item(href='#') 2018
+					a.dropdown-item(href='#') 2017
+
 		table
 			tr
 				td stt

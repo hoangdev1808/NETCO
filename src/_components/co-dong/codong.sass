@@ -62,12 +62,24 @@
 			color: #666666
 			font-weight: 400
 			font-size: 16px
-		.section-select
+			margin-right: 20px
+		.dropdown
 			width: 156px
 			position: relative
 			margin-left: 20px
-			height: 40px
-			select
+			.dropdown-toggle
+				&::after
+					border: none
+					font-family: Linearicons-Free
+					content: "\e874"
+					position: absolute
+					right: 10px
+					top: 50%
+					transform: translateY(-50%)
+					font-size: 14px
+					font-weight: 400
+					letter-spacing: 0.7px
+			.dropdown-menu
 				background-color: #fbf7ef
 				padding: 0 10px 0 8px
 				border-radius: 5px
@@ -79,19 +91,6 @@
 				font-size: 14px
 				color: #666666
 				cursor: pointer
-				height: 100%
-			select::-ms-expand
-				display: none
-			&::before
-				font-family: Linearicons-Free
-				content: "\e874"
-				position: absolute
-				right: 10px
-				top: 50%
-				transform: translateY(-50%)
-				font-size: 14px
-				font-weight: 400
-				letter-spacing: 0.7px
 	table
 		width: 100%
 		@media screen and ( max-width: 1024px )
@@ -108,7 +107,7 @@
 		tr>td:last-child
 			padding-right: 45px
 		td,tr
-			text-align: center
+			text-align: left
 		tr:first-child
 			background-color: $red
 			td

@@ -68,7 +68,7 @@
 				display: flex
 				align-items: center
 				justify-content: center
-				img 
+				img
 					width: 20px
 					height: 20px
 					border-radius: 50%
@@ -106,10 +106,168 @@
 					width: 100%
 					display: flex
 			.nav-item
+				position: relative
 				.nav-link
 					font-size: .9375rem
 					color: rgb(193, 0, 22)
 					font-weight: bold
+				&.dropdown
+					.sub-title
+						.material-icons
+							cursor: pointer
+							@media screen and ( min-width: 1200px)
+								display: none
+					.dropdown-menu-wrapper
+						position: absolute
+						z-index: 0
+						top: 200%
+						left: -70%
+						margin: 0 auto
+						min-width: 1162px
+						min-height: 341px
+						border-radius: 0 0 10px 10px
+						background-color: #ffffff
+						opacity: 0
+						visibility: hidden
+						transition: all ease-in-out .5s
+						display: flex
+						padding: 30px 1rem
+						@media screen and ( max-width: 1280px)
+							left: -100%
+						.dropdown-item
+							display: flex
+							white-space: unset
+							.title
+								position: relative
+								.zone-image
+									width: 280px
+									height: 280px
+									border-radius: 10px
+									img
+										border-radius: 10px
+										width: 100%
+										height: 100%
+									
+									&::after
+										border-radius: 10px
+										position: absolute
+										content: ''
+										top: 0
+										left: 0
+										width: 100%
+										height: 100%
+										background-color: rgba($color: #000000, $alpha: .5)
+								.nav-link
+									position: absolute
+									top: 50%
+									left: 50%
+									width: 180px
+									transform: translate(-50%, -50%)
+									z-index: 2
+									color: #ffffff
+									font-size: 24/16*1rem
+									font-weight: 900
+									line-height: 36px
+									text-align: center
+									text-transform: uppercase
+
+								@media screen and ( min-width: 1200px)
+									.material-icons
+										display: none
+							.list-sub-menu
+								margin-left: 70px
+								padding-left: 0
+								list-style: none
+								li
+									position: relative
+									padding-left: 7px
+									a
+										color: #333333
+										font-size: .9rem
+										font-weight: 500
+										line-height: 36px
+										text-align: left
+										transition: all .5s
+									&::after
+										content: ''
+										position: absolute
+										top: 50%
+										right: 100%
+										transform: translateY(-50%)
+										width: 0
+										height: 2px
+										background-color: $red
+										opacity: 0
+										visibility: hidden
+										transition: all .5s
+									&.active
+										&::after
+											content: ''
+											position: absolute
+											top: 50%
+											right: 100%
+											transform: translateY(-50%)
+											width: 40px
+											height: 2px
+											background-color: $red
+											opacity: 1
+											visibility: visible
+									&:hover
+										&::after
+											opacity: 1
+											visibility: visible
+											width: 40px
+											transition: all .5s
+										a
+											color: $red
+											transition: all .5s
+							&:nth-child(2)
+								margin-left: auto
+						.dropdown-item:active
+							background: none !important
+					&:hover
+						.dropdown-menu-wrapper
+							top: 123%
+							opacity: 1
+							visibility: visible
+							transition: all ease-in-out .5s
+					&::before
+						position: absolute
+						content: ''
+						width: 100%
+						height: 5px
+						top: 110%
+						left: 0
+				&::after
+					content: ''
+					position: absolute
+					top: 100%
+					left: 50%
+					transform: translateX(-50%)
+					width: 0
+					height: 1px
+					background-color: $red
+					overflow: hidden
+					opacity: 0
+					transition: all .5s
+				&:hover
+					&::after
+						transition: all .5s
+						width: 20px
+						opacity: 1
+						visibility: visible
+				&.active
+					&::after
+						content: ''
+						position: absolute
+						top: 100%
+						left: 50%
+						transform: translateX(-50%)
+						width: 20px
+						height: 1px
+						background-color: $red
+						transition: all .5s
+						opacity: 1
 	@media screen and ( max-width: 1366px)
 		.navbar
 			max-width: 100%
@@ -161,6 +319,8 @@
 				.kv-toggle
 					order: 3
 				.nav-mobile
+					padding-left: 0
+					padding-bottom: 30px
 					display: flex
 					flex-direction: column
 					position: absolute
@@ -172,8 +332,20 @@
 					opacity: 0
 					visibility: hidden
 					list-style: none
-					padding: 0
 					transition: all ease-in-out .5s
+					&::-webkit-scrollbar-track 
+						box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+						background-color: #ffffff
+
+					&::-webkit-scrollbar 
+						width: 5px
+						height: 5px
+						background-color: #ffffff
+
+					&::-webkit-scrollbar-thumb 
+						border-radius : 2.5px
+						box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+						background-color: $red
 					.nav-item
 						display: inline-block
 						transition: all ease-in-out .5s
@@ -183,6 +355,50 @@
 							font-size: .9rem
 							color: rgb(193, 0, 22)
 							font-weight: bold
+						&.dropdown
+							.sub-title
+								display: flex
+								align-items: center
+								.material-icons
+									color: $red
+									cursor: pointer
+									transform: rotate(0deg)
+									transition: all .5s
+									&.active
+										transform: rotate(180deg)
+										transition: all .5s
+							.dropdown-menu-wrapper
+								display: none
+								padding-left: 20px
+								list-style: none
+								.dropdown-item
+									padding: 0
+									.title
+										display: flex
+										align-items: center
+										.zone-image
+											img
+												display: none
+										.material-icons
+											color: $red
+											font-size: 24px
+											cursor: pointer
+											transform: rotate(0deg)
+											transition: all .5s
+											&.active
+												transform: rotate(180deg)
+												transition: all .5s
+									.list-sub-menu
+										display: none
+										list-style: none
+										li 
+											a
+												line-height: 36px
+												color: #333
+												font-size: .9rem
+
+									&:active
+										background: none
 					&.active
 						opacity: 1
 						visibility: visible
@@ -221,5 +437,3 @@
 				.navbar-brand
 					width: 50px
 					height: 50px
-
-

@@ -332,10 +332,13 @@ function MultiLevelAccordiion() {
             $this.parent().parents().find('.inner').slideUp(350);
             $this.parent().parents().find('.item').removeClass('active');
             $this.parent().next().toggleClass('show');
-            $this.parent().next().slideToggle(350);
+            $this.parent().next().slideDown(350);
             $this.parents().addClass('active');
         }
     });
+    if ($('.accordion li.item').hasClass('active')) {
+        $('.accordion li.item.active').find('.inner').slideDown()
+    }
 }
 
 function quantityNumber() {
@@ -356,9 +359,27 @@ function quantityNumber() {
         $(this).parents('.input-group').find('input').val(plus + 1);
     });
 }
+
 function moveForm() {
     $('.contact-right-col .wrap-form .frm-captcha').appendTo('.contact-right-col .contact-form')
     $('.contact-right-col .wrap-form .frm-btnwrap').appendTo('.contact-right-col .contact-form')
+}
+
+function activeMobileMenu() {
+    if ($(window).width() <= 1199.98) {
+        $('.nav-item.dropdown .sub-title .material-icons').on('click', function (e) {
+            $(this).toggleClass('active')
+            e.stopPropagation();
+            $(e.currentTarget).parent().parents().children('.dropdown-menu-wrapper').slideToggle();
+        });
+        $('.dropdown-item .title .material-icons').on('click', function (j) {
+            $(this).toggleClass('active')
+            j.stopPropagation();
+            $(j.currentTarget).parent().parents().children('.list-sub-menu').slideToggle();
+            $('.dropdown-item .title .material-icons').not(this).parent().parents().children('.list-sub-menu').slideUp()
+            $('.dropdown-item .title .material-icons').not(this).removeClass('active')
+        });
+    }
 }
 
 // if ($(window).width() > 1025) {
@@ -542,6 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     MultiLevelAccordiion();
     quantityNumber();
     moveForm();
+    activeMobileMenu();
     setTimeout(() => {
         $('section:first-child').addClass('current-page')
     }, 100);
