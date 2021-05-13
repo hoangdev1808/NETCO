@@ -39,7 +39,7 @@
         </option>
     </xsl:template>
     <xsl:template match="Product">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6">
             <div class="item-pro">
                 <div class="img">
                     <a>

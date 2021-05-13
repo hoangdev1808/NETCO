@@ -1,6 +1,7 @@
 {
 	"font": [
-		"src/webfonts/**"
+		"src/webfonts/**",
+		"node_modules/@mdi/font/fonts/**"
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
@@ -17,6 +18,7 @@
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.min.css",
 		"bower_components/aos/dist/aos.css",
-		"node_modules/@fortawesome/fontawesome-free/css/all.css"
+		"node_modules/@fortawesome/fontawesome-free/css/all.css",
+		"node_modules/@mdi/font/css/materialdesignicons.css"
 	]
 }

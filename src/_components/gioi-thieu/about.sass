@@ -10,23 +10,17 @@
 		@media screen and ( max-width: 991px)
 			max-width: 80px
 			max-height: 60px
-			top: 100px
-			left: 83%
-			padding: 0 !important
+			padding-left: 0
 			.box-category
 				p
 					font-size: 0
 				.material-icons
 					font-size: 30px
-					-webkit-animation: sdb07 2s infinite
-					animation: sdb07 2s infinite
-					opacity: 0
-					box-sizing: border-box
 			.categroly
 				ul
 					position: absolute
 					top: 0
-					right: 100%
+					left: 0
 					background-color: #f3f3f3
 					min-width: 250px
 	.categroly
@@ -72,12 +66,12 @@
 				li
 					.nav-link
 						padding: .9rem
-						font-size: .875rem
+						font-size: .6rem
 		@media screen and ( max-width: 1199px)
 			ul
 				li
 					.nav-link
-						padding: .5rem
+						padding: .5rem .3rem
 		@media screen and ( max-width: 991.98px)
 			ul
 				display: none
@@ -170,6 +164,14 @@
 					border-radius: 50px
 					background-color: #ffffff
 					.desc
+						color: #333333
+						font-size: 15/16*1rem
+						font-weight: 400
+						font-style: normal
+						letter-spacing: normal
+						line-height: 24px
+						text-align: left
+						padding-bottom: 20px
 						p
 							color: #333333
 							font-size: 15/16*1rem
@@ -183,28 +185,392 @@
 					.img
 						width: 450px
 						height: 450px
+						border-radius: 50%
+						img
+							width: 100%
+							height: 100%
+							border-radius: 50%
+							object-fit: cover
 				&:nth-child(even)
 					.col-left-content
 						order: 2
 						background-color: $red
 						.desc
-							p
-								color: #ffffff
+							color: #ffffff
 					.col-right-image
 						order: 1
 						.img
 							display: flex
 							align-items: center
+	@media screen and ( max-width: 991.98px)
+		.caption
+			margin-bottom: 30px
+			.desc
+				width: 100%
+		.list-wrapper
+			margin-top: 110px
+			.list-ellip
+				max-width: 100%
+				transform: translateY(-20%)
+			.list-items
+				max-width: 100%
+				.item
+					flex-direction: column-reverse
+					margin-bottom: 20px
+					.col-left-content
+						width: 100%
+					.col-right-image
+						.img
+							width: 255px
+							height: 255px
+					&:nth-child(even)
+						.col-left-content
+							order: 1
+						.col-right-image
+							order: 2
+	@media screen and ( max-width: 767.98px)
+		.list-wrapper
+			margin-top: 0
+			.list-ellip
+				transform: translateY(0)
+				flex-wrap: wrap
+				justify-content: center
+				.item
+					margin-right: 20px
+					margin-bottom: 20px
+					border-radius: 0
+					&:nth-child(2)
+						width: 180px
+						height: 180px
+						margin-right: 0
+					&:last-child
+						margin-right: 0
+	@media screen and ( max-width: 400px)
+		.list-wrapper
+			.list-ellip
+				.item
+					width: 100%
+					margin-right: 0
+					&:nth-child(2)
+						width: 100%
+#about-2
+	.history-swiper
+		position: relative
+		.history
+			padding-bottom: 60px
+			.slide-inner
+				padding-top: 10px
+				width: 100%
+				min-height: 230px
+				border-left: solid 1px #e5e5e5
+				.title
+					padding-left: 13/16*1rem
+					position: relative
+					color: #c10016
+					font-size: 20/16*1rem
+					font-weight: 700
+					line-height: 28px
+					text-align: left
+					letter-spacing: 2px
+					margin-bottom: 30px
+					&::before
+						position: absolute
+						content: ''
+						width: 12px
+						height: 12px
+						background-color: #0042b4
+						border-radius: 50%
+						top: 50%
+						left: -6.6px
+						transform: translateY(-50%)
+				.content
+					padding-left: 13/16*1rem
+					.desc
+						color: #333333
+						font-size: 14/16*1rem
+						font-weight: 400
+						line-height: 20px
+						text-align: left
+		.swiper-button-next,
+		.swiper-button-prev
+			background: none
+			width: 35px
+			height: 35px
+			&::after
+				font-family: Linearicons-Free
+				color: #cccccc
+				font-size: 36/16*1rem
+				font-weight: 400
+				line-height: 28px
+		.swiper-button-next
+			right: -45px
+			&::after
+				content: '\e876'
+		.swiper-button-prev
+			left: -45px
+			&::after
+				content: '\e875'
+		.swiper-scrollbar
+			width: 100%
+			height: 4px
+			background-color: #e5e5e5
+			.swiper-scrollbar-drag
+				width: 810px
+				height: 100%
+				border-radius: 2px
+				background-color: #c10016
+		@media screen and ( max-width: 575.98px)
+			.swiper-button-next,
+			.swiper-button-prev
+				top: 90%
+				&::after
+					font-size: 24/16*1rem
+			.swiper-button-prev
+				left: 40%
+			.swiper-button-next
+				right: 40%
+#about-3
+	width: 100%
+	height: 100vh
+	.caption
+		margin-bottom: 56px
+	.list-ellip
+		max-width: 870px
+		margin: 0 auto
+		display: flex
+		justify-content: space-around
+		.item
+			width: 340px
+			height: 340px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			background-color: #0042b4
+			background-image: radial-gradient(circle 127px at 1.66% 0.31%, #e5212a 0%, #8b0010 100%)
+			.img
+				margin-bottom: 23px
+			.title
+				color: #ffffff
+				font-size: 24/16*1rem
+				font-weight: 700
+				line-height: 28px
+				text-align: left
+				letter-spacing: 0.6px
+				margin-bottom: 24px
+			.desc
+				color: #ffffff
+				font-size: 15/16*1rem
+				line-height: 22px
+				text-align: center
+				padding: 0 40px
+	@media screen and ( max-width: 767.98px)
+		.caption
+			margin-bottom: 0
+		.list-ellip
+			max-width: 100%
+			flex-direction: column
+			align-items: center
+			.item
+				border-radius: 0
+				margin-bottom: 20px
+				height: auto
+				padding: 30px
+#about-5
+	.item
+		padding: 0 75px
+		text-align: center
+		.img
+			width: 450px
+			height: 450px
+			border-radius: 50%
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				border-radius: 50%
+		.content
+			margin-top: 24px
+			.title
+				margin-bottom: 30px
+				color: #c10016
+				font-size: 24px
+				font-weight: 700
+				line-height: 30px
+				text-align: center
+				text-transform: uppercase
+			.desc
+				p
+					color: #333333
+					font-size: 15/16*1rem
+					line-height: 24px
+					text-align: center
+	@media screen and ( max-width: 1199.98px)
+		.item
+			padding: 0
+	@media screen and ( max-width: 991.98px)
+		.item
+			margin-bottom: 20px
+			.img
+				width: auto
+				height: auto
+				border-radius: 0
+				img
+					border-radius: 0
+			.content
+				margin-top: 20px
+				.title
+					margin-bottom: 10px
+					font-size: 18/16*1rem
+				.desc
+					p
+						text-align: justify
+	@media screen and ( max-width: 575.98px)
+		.item
+			.content
+				.title
+					font-size: 1rem
 #about-6
-	background-image: url('../assets/about/bg-2.png')
-	background-size: 100% 100%
-	background-position: center
-	background-repeat: no-repeat
 	width: 100%
 	height: 600px
+	padding-bottom: 0
 	.content
-		max-width: 430px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-height: 480px
 		.caption
+			max-width: 430px
 			.title
 				color: #ffffff
 				text-align: left
+			.desc
+				width: 100%
+				color: #ffffff
+				font-size: 18/16*1rem
+				font-weight: 400
+				line-height: 28px
+				text-align: left
+	@media screen and ( min-width: 1240px)
+		.content
+			.img
+				display: none
+	@media screen and ( max-width: 1239.98px)
+		height: auto
+		padding-top: 0
+		background: none !important
+		.content
+			min-height: auto
+			.img
+				height: auto
+				margin-bottom: 20px
+			.caption
+				max-width: 100%
+				.title
+					margin-bottom: 20px
+					color: $red
+					text-align: center
+				.desc
+					width: 100%
+					color: #333
+#about-7
+	.content-col-left
+		padding-left: 60px
+		.title
+			position: relative
+			padding-bottom: 18px
+			margin-bottom: 25px
+			color: #333333
+			font-size: 24/16*1rem
+			font-weight: 700
+			line-height: 30px
+			text-align: center
+			text-transform: uppercase
+			&::after
+				position: absolute
+				content: ''
+				top: 100%
+				left: 50%
+				transform: translateX(-50%)
+				width: 50px
+				height: 1px
+				background-color: #e5212a
+		.desc
+			color: #333333
+			font-size: 15/16*1rem
+			font-weight: 400
+			line-height: 24px
+			text-align: center
+
+	.image-col-right
+		width: 500px
+		height: 500px
+		border-radius: 50%
+		position: relative
+		img
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			object-fit: cover
+			opacity: .9
+	@media screen and ( max-width: 1199.98px)
+		.content-col-left
+			padding-left: 0
+		.image-col-right
+			width: 370px
+			height: 370px
+	@media screen and ( max-width: 991.98px)
+		.left
+			order: 2
+
+		.right
+			order: 1
+			margin-bottom: 20px
+		.content-col-left
+			.title
+				padding-bottom: 1rem
+				margin-bottom: 1rem
+		.image-col-right
+			width: auto
+			height: auto
+			border-radius: 0
+			img
+				border-radius: 0
+#about-8
+	.item
+		width: 100%
+		display: flex
+		margin-bottom: 30px
+		.img
+			min-width: 180px
+			min-height: 120px
+			padding: 10px 0
+			text-align: center
+			border-radius: 5px
+			border: 1px solid #e1e1e1
+			background-color: #ffffff
+		.content
+			padding-top: 7px
+			padding-left: 20px
+			.title
+				color: #333333
+				font-size: 14/16*1rem
+				font-weight: 700
+				text-align: left
+				text-transform: uppercase
+				padding-bottom: 1rem
+				margin-bottom: 1rem
+				position: relative
+				&::after
+					position: absolute
+					content: ''
+					width: 50px
+					height: 1px
+					background-color: #e5212a
+					top: 100%
+					left: 0
+			.desc
+				color: #666666
+				font-size: 14/16*1rem
+				font-weight: 400

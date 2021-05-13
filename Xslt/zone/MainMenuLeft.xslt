@@ -59,6 +59,11 @@
     </xsl:template>
     <xsl:template match="Zone" mode="LEVEL2">
         <li class="dropdown-item">
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text disable-output-escaping="yes">dropdown-item active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <div class="title">
                 <div class="zone-image">
                     <a>

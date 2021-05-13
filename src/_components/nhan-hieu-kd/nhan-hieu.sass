@@ -7,11 +7,19 @@
 		padding-top: 30px
 		padding-bottom: 40px
 		border-bottom: solid 1px $color-border
+		&:nth-child(even)
+			.col-right
+				.single-swiper
+					.swiper-button-prev
+						display: none
 		&:nth-child(odd)
 			.col-left
 				order: 2
 			.col-right
 				order: 1
+				.single-swiper
+					.swiper-button-next
+						display: none
 		&:last-child
 			border: none
 			padding-bottom: 0
@@ -19,12 +27,15 @@
 				.row
 					justify-content: flex-end
 		.brand-item
+			width: 285px
+			height: 285px
+			border-radius: 50%
 			position: relative
 			.img
 				overflow: hidden
 				position: relative
-				width: 285px
-				height: 285px
+				width: 100%
+				height: 100%
 				border-radius: 50%
 				img
 					width: 100%
@@ -96,6 +107,46 @@
 					font-size: 24px
 					font-weight: 400
 					font-style: normal
+		@media screen and ( max-width: 1024.98px)
+			.single-swiper
+				.swiper-button-next,
+				.swiper-button-prev
+					top: 100%
+				.swiper-button-next
+					right: 40%
+				.swiper-button-prev
+					left: 40%
+			&:nth-child(even)
+				.col-right
+					.single-swiper
+						.swiper-button-prev
+							display: block
+			&:nth-child(odd)
+				.col-right
+					.single-swiper
+						.swiper-button-next
+							display: block
+		@media screen and ( max-width: 767.98px)
+			.brand-item
+				width: 100%
+				border-radius: 0
+				.img
+					border-radius: 0
+					img
+						border-radius: 0
+					&::after
+						border-radius: 0
+			&:nth-child(odd)
+				.col-left
+					order: 1
+				.col-right
+					order: 2
+		@media screen and ( max-width: 575.98px)
+			.single-swiper
+				.swiper-button-next
+					right: 20%
+				.swiper-button-prev
+					left: 20%
 .product-brand-page
 	background-color: #fbf7ef
 	.zone-title
@@ -203,6 +254,24 @@
 				padding: 0 .5rem
 	.product-wrapper
 		padding-top: 30/16*1rem
+	@media screen and ( max-width: 1024.98px)
+		.zone-title
+			font-size: .9rem
+		.accordion
+			.item
+				.accordion-title
+					.nav-link
+						padding: 1rem .5rem
+						font-size: .9rem
+		.product-sort-wrapper
+			.wrapper-left
+				.root-tile
+					font-size: 18/16*1rem
+	@media screen and ( max-width: 991.98px)
+		.accordion
+			margin-bottom: 20px
+		.product-sort-wrapper
+			flex-direction: column
 .product-detail
 	background-color: #fbf7ef
 	padding-top: 105px

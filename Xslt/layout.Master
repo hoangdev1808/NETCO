@@ -49,28 +49,29 @@
         <div id="wrapper">
             <header class="kv-header">
                 <nav class="navbar navbar-expand-lg">
-                    <portal:ModuleWrapper ID="mdl207" runat="server" ConfigureModuleId="207" />
-                    <div class="navbar-brand">
-                        <portal:ModuleWrapper ID="mdl206" runat="server" ConfigureModuleId="206" />
-                    </div>
-
-                    <portal:ModuleWrapper ID="mdl208" runat="server" ConfigureModuleId="208" />
-
-                    <div class="list-icons">
-                        <portal:ModuleWrapper ID="mdl209" runat="server" ConfigureModuleId="209" />
-                        <div class="shopping"><img src="/Data/Sites/1/skins/default/assets/icons/add-shopping.png"
-                                alt=""></div>
-                        <div class="search-icon"><img src="/Data/Sites/1/skins/default/assets/icons/search.png" alt="">
+                    <div class="container">
+                        <portal:ModuleWrapper ID="mdl207" runat="server" ConfigureModuleId="207" />
+                        <div class="navbar-brand">
+                            <portal:ModuleWrapper ID="mdl206" runat="server" ConfigureModuleId="206" />
                         </div>
-                        <div id="search-box">
-                            <div class="form-group">
-                                <portal:ModuleWrapper ID="mdl210" runat="server" ConfigureModuleId="210" />
+                        <portal:ModuleWrapper ID="mdl208" runat="server" ConfigureModuleId="208" />
+                        <div class="list-icons">
+                            <portal:ModuleWrapper ID="mdl209" runat="server" ConfigureModuleId="209" />
+                            <div class="shopping"><img src="/Data/Sites/1/skins/default/assets/icons/add-shopping.png"
+                                    alt=""></div>
+                            <div class="search-icon"><img src="/Data/Sites/1/skins/default/assets/icons/search.png"
+                                    alt="">
+                            </div>
+                            <div id="search-box">
+                                <div class="form-group">
+                                    <portal:ModuleWrapper ID="mdl210" runat="server" ConfigureModuleId="210" />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="main-nav">
-                        <ul class="nav-mobile"></ul>
-                        <div class="kv-toggle"><span></span><span></span><span></span><span></span></div>
+                        <div class="main-nav">
+                            <ul class="nav-mobile"></ul>
+                            <div class="kv-toggle"><span></span><span></span><span></span><span></span></div>
+                        </div>
                     </div>
                 </nav>
             </header>

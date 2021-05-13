@@ -17,7 +17,7 @@
     </xsl:template>
     <xsl:template match="Zone">
         <div class="brand-list row">
-            <div class="col-lg-3 col-left">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-left">
                 <div class="brand-item">
                     <a>
                         <xsl:attribute name="href">
@@ -45,7 +45,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-9 col-right">
+            <div class="col-xl-9 col-lg-8 col-md-6 col-right">
                 <div class="single-swiper">
                     <div class="swiper-container product-brand">
                         <div class="swiper-wrapper">
@@ -53,6 +53,7 @@
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
@@ -82,7 +83,7 @@
                     </a>
                 </div>
                 <div class="content">
-                    <div class="product-title">
+                    <div class="product-title lcl lcl-2">
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="Url"></xsl:value-of>

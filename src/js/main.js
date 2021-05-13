@@ -78,12 +78,12 @@ const ListSlide = () => {
                 prevEl: ".swiper-button-prev-" + index
             },
             breakpoints: {
-                1366: {
+                1200: {
                     slidesPerView: 3,
                     spaceBetween: 20,
                 },
-                767: {
-                    slidesPerView: 3,
+                991: {
+                    slidesPerView: 2,
                     spaceBetween: 10,
                 },
                 575: {
@@ -159,6 +159,48 @@ const ListSlide = () => {
             swiper: galleryThumbs,
         },
     });
+    $(".history-swiper .swiper-container").each(function (index, element) {
+        var $this = $(this);
+        $this.addClass("instance-" + index);
+        $this.parent().find(".swiper-button-prev").addClass("swiper-button-prev-" + index);
+        $this.parent().find(".swiper-button-next").addClass("swiper-button-next-" + index);
+        var scrollbar = new Swiper(".instance-" + index, {
+            breakpointsInverse: true,
+            spaceBetween: 10,
+            slidesPerView: 6,
+            loop: true,
+            freeMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next-" + index,
+                prevEl: ".swiper-button-prev-" + index
+            },
+            scrollbar: {
+                el: '.history-swiper .js-swiper-scrollbar',
+                draggable: true,
+                snapOnRelease: true
+            },
+            breakpoints: {
+                1366: {
+                    slidesPerView: 6,
+                },
+                767: {
+                    slidesPerView: 3,
+                },
+                575: {
+                    slidesPerView: 2,
+                },
+                375: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+        try {
+            scrollbar.slideTo(0);
+        } catch (error) {
+            scrollbar.slideTo(0);
+        }
+
+    });
 }
 const checkLayoutBanner = () => {
     const pagesBanner = $("#page-banner");
@@ -201,6 +243,7 @@ function setBackground() {
             });
         });
     }
+
 }
 
 function tabs() {

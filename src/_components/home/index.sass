@@ -63,6 +63,7 @@
 						transition: all .5s
 						content: ''
 						background-color: rgba($color: $red, $alpha: .5)
+
 .home-xuatkhau
 	.desc
 		max-width: 600px
@@ -165,11 +166,14 @@
 					color: rgb(255, 255, 255)
 		@media screen and ( max-width: 575.98px)
 			.list-item
-				.item
+				a
 					width: 100%
-					border-radius: 0
-					margin-right: 0
-					margin-bottom: 20px
+					.item
+						width: 100%
+						height: 120px
+						border-radius: 0
+						margin-right: 0
+						margin-bottom: 20px
 .home-netco
 	article
 		max-width: 660px
@@ -554,8 +558,23 @@
 					&:nth-child(2),
 					&:nth-child(3)
 						margin-right: 0
-
-
+@media screen and ( max-width: 375px)
+	.home-product
+		padding-top: 30px
+		.category-list
+			flex-wrap: nowrap
+			flex-direction: row
+			justify-content: space-between
+			a
+				.item
+					width: 150px
+					height: 150px
+					&:first-child
+						margin-left: 0
+					.text
+						.title
+							padding: 0 20px
+							font-size: 18/16*1rem
 
 
 
